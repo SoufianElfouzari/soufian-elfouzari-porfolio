@@ -3,9 +3,7 @@ import "./KontaktForm.css";
 
 const CONTACT_EMAIL = "elfouzari.soufian@gmail.com";
 
-const CONTACT_ENDPOINT =
-  import.meta.env.VITE_CONTACT_API_URL ||
-  "http://127.0.0.1:5000/api/contact";
+const CONTACT_ENDPOINT = "/api/contact";
 
 const initialFormData = {
   inquiryType: "",
@@ -458,7 +456,7 @@ function KontaktForm() {
 
       if (error instanceof TypeError) {
         setServerError(
-          "Das Kontakt-Backend ist nicht erreichbar. Bitte prüfen Sie, ob der Flask-Server unter http://127.0.0.1:5000 läuft.",
+          "Der E-Mail-Dienst ist momentan nicht erreichbar. Bitte versuchen Sie es später erneut oder schreiben Sie direkt per E-Mail.",
         );
 
         return;
