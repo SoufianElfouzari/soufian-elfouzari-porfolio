@@ -124,7 +124,7 @@ function AboutMeHero() {
 
             <div className="about-me-hero__photo-frame">
               <img
-                src="/images/person.webp"
+                src="/images/person.png"
                 alt="Soufian El-Fouzari"
                 onError={handleImageError}
               />
