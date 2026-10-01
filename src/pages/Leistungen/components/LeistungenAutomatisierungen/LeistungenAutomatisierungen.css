@@ -1,0 +1,1063 @@
+.leistungen-automatisierungen {
+  --automation-grey: #d9d9d9;
+  --automation-grey-dark: #747774;
+  --automation-gold: #be9d56;
+  --automation-gold-dark: #b3934d;
+  --automation-black: #111111;
+  --automation-white: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(70px, 8vw, 115px) 0;
+  color: var(--automation-black);
+  background: #f8f8f5;
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.leistungen-automatisierungen *,
+.leistungen-automatisierungen *::before,
+.leistungen-automatisierungen *::after {
+  box-sizing: border-box;
+}
+
+.leistungen-automatisierungen__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leistungen-automatisierungen__background::before {
+  position: absolute;
+  top: -210px;
+  right: -140px;
+  width: 510px;
+  height: 510px;
+  border: 1px solid rgba(190, 157, 86, 0.11);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 60px rgba(190, 157, 86, 0.02),
+    0 0 0 120px rgba(17, 17, 17, 0.012);
+  content: "";
+  animation: automation-circle 17s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leistungen-automatisierungen__background path {
+  fill: none;
+  stroke: rgba(190, 157, 86, 0.11);
+  stroke-width: 1;
+  stroke-dasharray: 7 17;
+  vector-effect: non-scaling-stroke;
+  animation: automation-line 27s linear infinite;
+}
+
+.leistungen-automatisierungen__background path:last-child {
+  stroke: rgba(17, 17, 17, 0.045);
+  stroke-dasharray: 4 20;
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+.leistungen-automatisierungen__glow {
+  position: absolute;
+  bottom: -100px;
+  left: 8%;
+  width: 390px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(190, 157, 86, 0.08);
+  filter: blur(90px);
+  animation: automation-glow 12s ease-in-out infinite alternate;
+}
+
+.leistungen-automatisierungen__code {
+  position: absolute;
+  color: rgba(17, 17, 17, 0.045);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.61rem;
+  white-space: nowrap;
+  animation: automation-code 11s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__code--one {
+  top: 16%;
+  right: 3%;
+}
+
+.leistungen-automatisierungen__code--two {
+  bottom: 7%;
+  left: 3%;
+  animation-delay: -5.5s;
+}
+
+.leistungen-automatisierungen__shape {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--automation-gold);
+  transform: rotate(45deg);
+  animation: automation-shape 9s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__shape--one {
+  top: 31%;
+  left: 4%;
+}
+
+.leistungen-automatisierungen__shape--two {
+  right: 5%;
+  bottom: 24%;
+  animation-delay: -4.5s;
+}
+
+.leistungen-automatisierungen__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  margin: 0 auto;
+}
+
+.leistungen-automatisierungen__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.58fr);
+  align-items: end;
+  gap: clamp(48px, 8vw, 115px);
+}
+
+.leistungen-automatisierungen__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--automation-gold-dark);
+  font-size: 0.63rem;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__eyebrow > span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  background: var(--automation-gold);
+  transform: rotate(45deg);
+  animation: automation-dot 2.6s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__header h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.35rem, 4.3vw, 4.6rem);
+  font-weight: 680;
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+}
+
+.leistungen-automatisierungen__header h2 span {
+  display: block;
+  color: var(--automation-grey-dark);
+  font-weight: 520;
+}
+
+.leistungen-automatisierungen__introduction {
+  padding-left: 19px;
+  border-left: 2px solid var(--automation-gold);
+}
+
+.leistungen-automatisierungen__introduction p {
+  margin: 0;
+  color: #646764;
+  font-size: 0.82rem;
+  line-height: 1.68;
+}
+
+.leistungen-automatisierungen__introduction a {
+  min-height: 44px;
+  width: fit-content;
+  margin-top: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 16px;
+  border: 1px solid var(--automation-black);
+  color: var(--automation-white);
+  background: var(--automation-black);
+  font-size: 0.65rem;
+  font-weight: 740;
+  text-decoration: none;
+  transition:
+    color 170ms ease,
+    background-color 170ms ease,
+    transform 170ms ease;
+}
+
+.leistungen-automatisierungen__introduction a svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition: transform 170ms ease;
+}
+
+.leistungen-automatisierungen__introduction a:hover {
+  color: var(--automation-black);
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.leistungen-automatisierungen__introduction a:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.leistungen-automatisierungen__case {
+  margin-top: clamp(43px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.leistungen-automatisierungen__case-block {
+  min-width: 0;
+  min-height: 235px;
+  padding: 25px clamp(18px, 2.4vw, 34px);
+  border-right: 1px solid rgba(17, 17, 17, 0.13);
+}
+
+.leistungen-automatisierungen__case-block:last-child {
+  border-right: 0;
+}
+
+.leistungen-automatisierungen__case-block:nth-child(2) {
+  color: var(--automation-white);
+  background: var(--automation-black);
+}
+
+.leistungen-automatisierungen__case-number {
+  display: block;
+  color: var(--automation-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.54rem;
+  font-weight: 750;
+}
+
+.leistungen-automatisierungen__case-block:nth-child(2)
+  .leistungen-automatisierungen__case-number {
+  color: var(--automation-gold);
+}
+
+.leistungen-automatisierungen__case-label {
+  margin-top: 24px;
+  display: block;
+  color: var(--automation-gold-dark);
+  font-size: 0.53rem;
+  font-weight: 760;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__case-block:nth-child(2)
+  .leistungen-automatisierungen__case-label {
+  color: var(--automation-gold);
+}
+
+.leistungen-automatisierungen__case-block h3 {
+  margin: 12px 0 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.42rem);
+  font-weight: 680;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.leistungen-automatisierungen__case-block p {
+  margin: 15px 0 0;
+  color: #686b68;
+  font-size: 0.67rem;
+  line-height: 1.58;
+}
+
+.leistungen-automatisierungen__case-block:nth-child(2) p {
+  color: rgba(217, 217, 217, 0.63);
+}
+
+.leistungen-automatisierungen__layout {
+  margin-top: clamp(43px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(350px, 0.72fr);
+  align-items: stretch;
+  gap: clamp(35px, 5vw, 75px);
+}
+
+.leistungen-automatisierungen__visual {
+  position: relative;
+  min-width: 0;
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  padding: clamp(25px, 4vw, 54px);
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  background:
+    linear-gradient(rgba(190, 157, 86, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 157, 86, 0.06) 1px, transparent 1px),
+    #efefeb;
+  background-size: 32px 32px;
+  box-shadow: 8px 8px 0 rgba(190, 157, 86, 0.27);
+}
+
+.leistungen-automatisierungen__workflow {
+  width: 88%;
+  overflow: hidden;
+  border: 1px solid #2b2b2b;
+  background: var(--automation-white);
+  box-shadow: 8px 11px 29px rgba(17, 17, 17, 0.17);
+}
+
+.leistungen-automatisierungen__workflow-head {
+  min-height: 38px;
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 11px;
+  color: var(--automation-grey);
+  background: var(--automation-black);
+}
+
+.leistungen-automatisierungen__workflow-head > div {
+  display: flex;
+  gap: 5px;
+}
+
+.leistungen-automatisierungen__workflow-head > div span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 0.32);
+}
+
+.leistungen-automatisierungen__workflow-head > div span:first-child {
+  background: var(--automation-gold);
+}
+
+.leistungen-automatisierungen__workflow-head > span {
+  overflow: hidden;
+  color: rgba(217, 217, 217, 0.57);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.43rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leistungen-automatisierungen__workflow-head small {
+  color: var(--automation-gold);
+  font-size: 0.4rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__workflow-body {
+  padding: 17px;
+}
+
+.leistungen-automatisierungen__workflow-status {
+  min-height: 53px;
+  display: grid;
+  grid-template-columns: 33px minmax(0, 1fr) 8px;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--automation-grey);
+}
+
+.leistungen-automatisierungen__workflow-status > span {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  color: var(--automation-gold-dark);
+  background: rgba(190, 157, 86, 0.13);
+  place-items: center;
+}
+
+.leistungen-automatisierungen__workflow-status svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.leistungen-automatisierungen__workflow-status > div {
+  display: grid;
+  gap: 4px;
+}
+
+.leistungen-automatisierungen__workflow-status strong {
+  font-size: 0.61rem;
+  font-weight: 710;
+}
+
+.leistungen-automatisierungen__workflow-status small {
+  color: var(--automation-grey-dark);
+  font-size: 0.42rem;
+}
+
+.leistungen-automatisierungen__workflow-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--automation-gold);
+  animation: automation-status 2.4s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__workflow-steps {
+  padding: 16px 0;
+  display: grid;
+  gap: 8px;
+}
+
+.leistungen-automatisierungen__workflow-step {
+  position: relative;
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: 25px 28px minmax(0, 1fr) 21px;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border: 1px solid var(--automation-grey);
+  background: #fafaf8;
+}
+
+.leistungen-automatisierungen__workflow-number {
+  color: var(--automation-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.44rem;
+  font-weight: 750;
+}
+
+.leistungen-automatisierungen__workflow-icon {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  color: var(--automation-gold-dark);
+  background: rgba(190, 157, 86, 0.12);
+  place-items: center;
+}
+
+.leistungen-automatisierungen__workflow-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.leistungen-automatisierungen__workflow-step > div {
+  display: grid;
+  gap: 3px;
+}
+
+.leistungen-automatisierungen__workflow-step small {
+  color: var(--automation-grey-dark);
+  font-size: 0.38rem;
+}
+
+.leistungen-automatisierungen__workflow-step strong {
+  font-size: 0.51rem;
+  font-weight: 700;
+}
+
+.leistungen-automatisierungen__workflow-check {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  color: var(--automation-white);
+  background: var(--automation-black);
+  place-items: center;
+}
+
+.leistungen-automatisierungen__workflow-check svg {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.leistungen-automatisierungen__connector {
+  position: absolute;
+  z-index: 3;
+  bottom: -9px;
+  left: 48px;
+  width: 1px;
+  height: 8px;
+  overflow: hidden;
+  background: rgba(190, 157, 86, 0.3);
+}
+
+.leistungen-automatisierungen__connector span {
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: var(--automation-gold-dark);
+  animation: automation-connector 1.8s linear infinite;
+}
+
+.leistungen-automatisierungen__workflow-footer {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 11px;
+  border-top: 1px solid var(--automation-grey);
+  color: var(--automation-grey-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.4rem;
+}
+
+.leistungen-automatisierungen__workflow-footer strong {
+  color: var(--automation-gold-dark);
+}
+
+.leistungen-automatisierungen__saved-time {
+  position: absolute;
+  z-index: 4;
+  right: clamp(20px, 3vw, 41px);
+  bottom: clamp(28px, 4vw, 50px);
+  width: min(225px, 41%);
+  min-height: 71px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 11px;
+  border: 1px solid #343434;
+  color: var(--automation-white);
+  background: var(--automation-black);
+  box-shadow: 7px 10px 24px rgba(17, 17, 17, 0.27);
+  animation: automation-saved-float 5s ease-in-out infinite;
+}
+
+.leistungen-automatisierungen__saved-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  border: 1px solid rgba(190, 157, 86, 0.42);
+  color: var(--automation-gold);
+  place-items: center;
+}
+
+.leistungen-automatisierungen__saved-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.leistungen-automatisierungen__saved-time > div {
+  display: grid;
+  gap: 4px;
+}
+
+.leistungen-automatisierungen__saved-time > div > span {
+  color: rgba(217, 217, 217, 0.48);
+  font-size: 0.37rem;
+}
+
+.leistungen-automatisierungen__saved-time strong {
+  font-size: 0.51rem;
+  font-weight: 700;
+}
+
+.leistungen-automatisierungen__saved-status {
+  color: var(--automation-gold);
+  font-size: 0.4rem;
+  font-weight: 720;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__visual-label {
+  position: absolute;
+  z-index: 5;
+  bottom: 14px;
+  left: 16px;
+  color: var(--automation-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.5rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__visual-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.leistungen-automatisierungen__visual-corner--top {
+  top: 14px;
+  left: 14px;
+  border-top: 2px solid var(--automation-gold);
+  border-left: 2px solid var(--automation-gold);
+}
+
+.leistungen-automatisierungen__visual-corner--bottom {
+  right: 14px;
+  bottom: 14px;
+  border-right: 2px solid var(--automation-gold);
+  border-bottom: 2px solid var(--automation-gold);
+}
+
+.leistungen-automatisierungen__capabilities {
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.leistungen-automatisierungen__capability {
+  min-height: 98px;
+  display: grid;
+  grid-template-columns: 29px 23px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding: 17px 4px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.leistungen-automatisierungen__capability-number {
+  padding-top: 4px;
+  color: var(--automation-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 750;
+}
+
+.leistungen-automatisierungen__capability-check {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  color: var(--automation-black);
+  background: var(--automation-gold);
+  place-items: center;
+}
+
+.leistungen-automatisierungen__capability-check svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.leistungen-automatisierungen__capability h3 {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 690;
+  line-height: 1.3;
+}
+
+.leistungen-automatisierungen__capability p {
+  margin: 7px 0 0;
+  color: #686b68;
+  font-size: 0.63rem;
+  line-height: 1.5;
+}
+
+.leistungen-automatisierungen__project {
+  margin-top: clamp(38px, 5vw, 58px);
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto auto;
+  align-items: center;
+  gap: clamp(25px, 4vw, 55px);
+  padding: 21px 25px;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  color: var(--automation-white);
+  background:
+    radial-gradient(
+      circle at 80% 0,
+      rgba(190, 157, 86, 0.18),
+      transparent 35%
+    ),
+    var(--automation-black);
+}
+
+.leistungen-automatisierungen__project-copy > span {
+  color: var(--automation-gold);
+  font-size: 0.51rem;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.leistungen-automatisierungen__project-copy h3 {
+  margin: 8px 0 0;
+  font-size: 1.17rem;
+  font-weight: 680;
+  letter-spacing: -0.035em;
+}
+
+.leistungen-automatisierungen__project-copy p {
+  max-width: 590px;
+  margin: 8px 0 0;
+  color: rgba(217, 217, 217, 0.58);
+  font-size: 0.62rem;
+  line-height: 1.5;
+}
+
+.leistungen-automatisierungen__project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.leistungen-automatisierungen__project-tags span {
+  min-height: 25px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid rgba(190, 157, 86, 0.4);
+  color: var(--automation-grey);
+  font-size: 0.51rem;
+  font-weight: 680;
+}
+
+.leistungen-automatisierungen__project > a {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  color: var(--automation-white);
+  font-size: 0.63rem;
+  font-weight: 740;
+  text-decoration: none;
+}
+
+.leistungen-automatisierungen__project > a svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--automation-gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition: transform 170ms ease;
+}
+
+.leistungen-automatisierungen__project > a:hover svg {
+  transform: translate(3px, -3px);
+}
+
+@keyframes automation-circle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-45px, 30px, 0);
+  }
+}
+
+@keyframes automation-line {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes automation-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(80px, -20px, 0) scale(1.15);
+  }
+}
+
+@keyframes automation-code {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-22px, -14px, 0);
+  }
+}
+
+@keyframes automation-shape {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-20px, -27px, 0) rotate(225deg);
+  }
+}
+
+@keyframes automation-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: rotate(45deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(225deg) scale(1.08);
+  }
+}
+
+@keyframes automation-status {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes automation-connector {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes automation-saved-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0.6deg);
+  }
+
+  50% {
+    transform: translate3d(0, -9px, 0) rotate(-0.6deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .leistungen-automatisierungen__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: 35px;
+  }
+
+  .leistungen-automatisierungen__project {
+    grid-template-columns: minmax(280px, 1fr) auto;
+  }
+
+  .leistungen-automatisierungen__project-tags {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .leistungen-automatisierungen__container {
+    width: calc(100% - 40px);
+  }
+
+  .leistungen-automatisierungen__header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .leistungen-automatisierungen__introduction {
+    max-width: 620px;
+  }
+
+  .leistungen-automatisierungen__case {
+    grid-template-columns: 1fr;
+  }
+
+  .leistungen-automatisierungen__case-block {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.13);
+  }
+
+  .leistungen-automatisierungen__case-block:last-child {
+    border-bottom: 0;
+  }
+
+  .leistungen-automatisierungen__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .leistungen-automatisierungen__visual {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leistungen-automatisierungen {
+    padding: 60px 0;
+  }
+
+  .leistungen-automatisierungen__container {
+    width: calc(100% - 28px);
+  }
+
+  .leistungen-automatisierungen__header h2 {
+    font-size: clamp(2.05rem, 10.5vw, 3.1rem);
+  }
+
+  .leistungen-automatisierungen__introduction {
+    padding-left: 15px;
+  }
+
+  .leistungen-automatisierungen__introduction p {
+    font-size: 0.74rem;
+  }
+
+  .leistungen-automatisierungen__case-block {
+    padding: 21px 15px;
+  }
+
+  .leistungen-automatisierungen__case-block h3 {
+    font-size: 1rem;
+  }
+
+  .leistungen-automatisierungen__case-block p {
+    font-size: 0.59rem;
+  }
+
+  .leistungen-automatisierungen__visual {
+    min-height: 350px;
+    padding: 19px 12px;
+    box-shadow: 5px 5px 0 rgba(190, 157, 86, 0.27);
+  }
+
+  .leistungen-automatisierungen__workflow {
+    width: 93%;
+  }
+
+  .leistungen-automatisierungen__workflow-head {
+    min-height: 30px;
+    grid-template-columns: 42px minmax(0, 1fr) 38px;
+    padding: 0 7px;
+  }
+
+  .leistungen-automatisierungen__workflow-body {
+    padding: 10px;
+  }
+
+  .leistungen-automatisierungen__workflow-step {
+    min-height: 43px;
+    grid-template-columns: 20px 22px minmax(0, 1fr) 17px;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .leistungen-automatisierungen__workflow-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .leistungen-automatisierungen__workflow-check {
+    width: 17px;
+    height: 17px;
+  }
+
+  .leistungen-automatisierungen__saved-time {
+    right: 9px;
+    bottom: 28px;
+    width: 139px;
+    grid-template-columns: 25px minmax(0, 1fr);
+    padding: 8px;
+  }
+
+  .leistungen-automatisierungen__saved-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .leistungen-automatisierungen__saved-status {
+    display: none;
+  }
+
+  .leistungen-automatisierungen__capability {
+    min-height: 94px;
+    grid-template-columns: 25px 20px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .leistungen-automatisierungen__capability-check {
+    width: 20px;
+    height: 20px;
+  }
+
+  .leistungen-automatisierungen__capability h3 {
+    font-size: 0.7rem;
+  }
+
+  .leistungen-automatisierungen__capability p {
+    font-size: 0.57rem;
+  }
+
+  .leistungen-automatisierungen__project {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    padding: 18px 15px;
+  }
+
+  .leistungen-automatisierungen__project-copy h3 {
+    font-size: 1rem;
+  }
+
+  .leistungen-automatisierungen__project-copy p {
+    font-size: 0.57rem;
+  }
+
+  .leistungen-automatisierungen__code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leistungen-automatisierungen *,
+  .leistungen-automatisierungen *::before,
+  .leistungen-automatisierungen *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

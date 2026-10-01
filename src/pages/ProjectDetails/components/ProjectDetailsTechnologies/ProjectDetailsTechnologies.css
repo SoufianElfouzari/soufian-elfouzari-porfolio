@@ -1,0 +1,385 @@
+.project-details-technologies {
+  --technologies-grey: #d9d9d9;
+  --technologies-grey-dark: #747774;
+  --technologies-gold: #be9d56;
+  --technologies-gold-dark: #b3934d;
+  --technologies-black: #111111;
+  --technologies-white: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(65px, 7vw, 100px) 0;
+  color: var(--technologies-black);
+  background: #ffffff;
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.project-details-technologies *,
+.project-details-technologies *::before,
+.project-details-technologies *::after {
+  box-sizing: border-box;
+}
+
+.project-details-technologies__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.project-details-technologies__background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-details-technologies__background path {
+  fill: none;
+  stroke: rgba(190, 157, 86, 0.09);
+  stroke-width: 1;
+  stroke-dasharray: 7 17;
+  vector-effect: non-scaling-stroke;
+  animation: technologies-line 27s linear infinite;
+}
+
+.project-details-technologies__glow {
+  position: absolute;
+  top: -100px;
+  left: 13%;
+  width: 350px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(190, 157, 86, 0.07);
+  filter: blur(85px);
+  animation: technologies-glow 12s ease-in-out infinite alternate;
+}
+
+.project-details-technologies__code {
+  position: absolute;
+  right: 4%;
+  bottom: 7%;
+  color: rgba(17, 17, 17, 0.045);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.61rem;
+  animation: technologies-code 10s ease-in-out infinite;
+}
+
+.project-details-technologies__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  margin: 0 auto;
+}
+
+.project-details-technologies__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 0.58fr);
+  align-items: end;
+  gap: clamp(48px, 8vw, 115px);
+}
+
+.project-details-technologies__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--technologies-gold-dark);
+  font-size: 0.63rem;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.project-details-technologies__eyebrow > span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  background: var(--technologies-gold);
+  transform: rotate(45deg);
+  animation: technologies-dot 2.6s ease-in-out infinite;
+}
+
+.project-details-technologies__header h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.25rem, 4.1vw, 4.4rem);
+  font-weight: 680;
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+}
+
+.project-details-technologies__header h2 span {
+  display: block;
+  color: var(--technologies-grey-dark);
+  font-weight: 520;
+}
+
+.project-details-technologies__header > p {
+  margin: 0;
+  padding-left: 19px;
+  border-left: 2px solid var(--technologies-gold);
+  color: #666966;
+  font-size: 0.8rem;
+  line-height: 1.68;
+}
+
+.project-details-technologies__list {
+  margin-top: clamp(39px, 5vw, 59px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  border-left: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.project-details-technologies__item {
+  position: relative;
+  min-width: 0;
+  min-height: 137px;
+  display: grid;
+  grid-template-columns: 27px 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 21px;
+  border-right: 1px solid rgba(17, 17, 17, 0.15);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  background: rgba(255, 255, 255, 0.75);
+  transition: background-color 180ms ease;
+}
+
+.project-details-technologies__item:hover {
+  background: rgba(190, 157, 86, 0.07);
+}
+
+.project-details-technologies__number {
+  align-self: start;
+  padding-top: 3px;
+  color: var(--technologies-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 760;
+}
+
+.project-details-technologies__image {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  padding: 9px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  background: #f8f8f5;
+  place-items: center;
+  transform: rotate(45deg);
+}
+
+.project-details-technologies__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transform: rotate(-45deg);
+}
+
+.project-details-technologies__image svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: var(--technologies-gold-dark);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+  transform: rotate(-45deg);
+}
+
+.project-details-technologies__content {
+  min-width: 0;
+  align-self: center;
+}
+
+.project-details-technologies__content h3 {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.project-details-technologies__content p {
+  margin: 7px 0 0;
+  color: #6a6d6a;
+  font-size: 0.63rem;
+  line-height: 1.5;
+}
+
+.project-details-technologies__note {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  color: var(--technologies-grey);
+  background: var(--technologies-black);
+}
+
+.project-details-technologies__note svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--technologies-gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.project-details-technologies__note p {
+  margin: 0;
+  color: rgba(217, 217, 217, 0.68);
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+@keyframes technologies-line {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes technologies-glow {
+  from {
+    transform: translate3d(-30px, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(75px, 20px, 0) scale(1.15);
+  }
+}
+
+@keyframes technologies-code {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-22px, -13px, 0);
+  }
+}
+
+@keyframes technologies-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: rotate(45deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(225deg) scale(1.08);
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-details-technologies__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .project-details-technologies__container {
+    width: calc(100% - 40px);
+  }
+
+  .project-details-technologies__header {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .project-details-technologies__header > p {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-details-technologies {
+    padding: 59px 0;
+  }
+
+  .project-details-technologies__container {
+    width: calc(100% - 28px);
+  }
+
+  .project-details-technologies__header h2 {
+    font-size: clamp(2.05rem, 10.5vw, 3.1rem);
+  }
+
+  .project-details-technologies__header > p {
+    padding-left: 15px;
+    font-size: 0.73rem;
+  }
+
+  .project-details-technologies__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-details-technologies__item {
+    min-height: 166px;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 10px;
+    padding: 15px 11px;
+  }
+
+  .project-details-technologies__number {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+  }
+
+  .project-details-technologies__image {
+    width: 37px;
+    height: 37px;
+    padding: 7px;
+  }
+
+  .project-details-technologies__content {
+    align-self: start;
+  }
+
+  .project-details-technologies__content h3 {
+    font-size: 0.72rem;
+  }
+
+  .project-details-technologies__content p {
+    font-size: 0.54rem;
+    line-height: 1.45;
+  }
+
+  .project-details-technologies__note {
+    padding: 13px;
+  }
+
+  .project-details-technologies__note p {
+    font-size: 0.56rem;
+  }
+
+  .project-details-technologies__code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-details-technologies *,
+  .project-details-technologies *::before,
+  .project-details-technologies *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

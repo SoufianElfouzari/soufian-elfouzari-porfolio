@@ -1,0 +1,1052 @@
+.leistungen-webanwendungen {
+  --applications-grey: #d9d9d9;
+  --applications-grey-dark: #8a8d8a;
+  --applications-gold: #be9d56;
+  --applications-gold-dark: #b3934d;
+  --applications-black: #111111;
+  --applications-white: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(70px, 8vw, 115px) 0;
+  color: var(--applications-white);
+  background: var(--applications-black);
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.leistungen-webanwendungen *,
+.leistungen-webanwendungen *::before,
+.leistungen-webanwendungen *::after {
+  box-sizing: border-box;
+}
+
+.leistungen-webanwendungen__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leistungen-webanwendungen__background::before {
+  position: absolute;
+  top: -180px;
+  right: -130px;
+  width: 490px;
+  height: 490px;
+  border: 1px solid rgba(190, 157, 86, 0.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 60px rgba(190, 157, 86, 0.024),
+    0 0 0 120px rgba(217, 217, 217, 0.012);
+  content: "";
+  animation: applications-circle 17s ease-in-out infinite;
+}
+
+.leistungen-webanwendungen__background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leistungen-webanwendungen__background path {
+  fill: none;
+  stroke: rgba(190, 157, 86, 0.14);
+  stroke-width: 1;
+  stroke-dasharray: 7 17;
+  vector-effect: non-scaling-stroke;
+  animation: applications-line 27s linear infinite;
+}
+
+.leistungen-webanwendungen__background path:last-child {
+  stroke: rgba(217, 217, 217, 0.045);
+  stroke-dasharray: 4 20;
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+.leistungen-webanwendungen__glow {
+  position: absolute;
+  bottom: -100px;
+  left: 8%;
+  width: 390px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(190, 157, 86, 0.11);
+  filter: blur(90px);
+  animation: applications-glow 12s ease-in-out infinite alternate;
+}
+
+.leistungen-webanwendungen__code {
+  position: absolute;
+  color: rgba(217, 217, 217, 0.055);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.61rem;
+  white-space: nowrap;
+  animation: applications-code 11s ease-in-out infinite;
+}
+
+.leistungen-webanwendungen__code--one {
+  top: 18%;
+  right: 3%;
+}
+
+.leistungen-webanwendungen__code--two {
+  bottom: 8%;
+  left: 3%;
+  animation-delay: -5.5s;
+}
+
+.leistungen-webanwendungen__shape {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--applications-gold);
+  transform: rotate(45deg);
+  animation: applications-shape 9s ease-in-out infinite;
+}
+
+.leistungen-webanwendungen__shape--one {
+  top: 31%;
+  left: 4%;
+}
+
+.leistungen-webanwendungen__shape--two {
+  right: 5%;
+  bottom: 24%;
+  animation-delay: -4.5s;
+}
+
+.leistungen-webanwendungen__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  margin: 0 auto;
+}
+
+.leistungen-webanwendungen__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.58fr);
+  align-items: end;
+  gap: clamp(48px, 8vw, 115px);
+}
+
+.leistungen-webanwendungen__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--applications-gold);
+  font-size: 0.63rem;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.leistungen-webanwendungen__eyebrow > span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  background: var(--applications-gold);
+  transform: rotate(45deg);
+  animation: applications-dot 2.6s ease-in-out infinite;
+}
+
+.leistungen-webanwendungen__header h2 {
+  margin: 18px 0 0;
+  color: var(--applications-white);
+  font-size: clamp(2.35rem, 4.3vw, 4.6rem);
+  font-weight: 680;
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+}
+
+.leistungen-webanwendungen__header h2 span {
+  display: block;
+  color: rgba(217, 217, 217, 0.53);
+  font-weight: 520;
+}
+
+.leistungen-webanwendungen__introduction {
+  padding-left: 19px;
+  border-left: 2px solid var(--applications-gold);
+}
+
+.leistungen-webanwendungen__introduction p {
+  margin: 0;
+  color: rgba(217, 217, 217, 0.65);
+  font-size: 0.82rem;
+  line-height: 1.68;
+}
+
+.leistungen-webanwendungen__introduction a {
+  width: fit-content;
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--applications-white);
+  font-size: 0.66rem;
+  font-weight: 740;
+  text-decoration: none;
+}
+
+.leistungen-webanwendungen__introduction a svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--applications-gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition: transform 170ms ease;
+}
+
+.leistungen-webanwendungen__introduction a:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.leistungen-webanwendungen__layout {
+  margin-top: clamp(43px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: minmax(350px, 0.72fr) minmax(0, 1.05fr);
+  align-items: stretch;
+  gap: clamp(35px, 5vw, 75px);
+}
+
+.leistungen-webanwendungen__services {
+  border-top: 1px solid rgba(217, 217, 217, 0.15);
+}
+
+.leistungen-webanwendungen__service {
+  min-height: 95px;
+  display: grid;
+  grid-template-columns: 29px 23px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding: 17px 4px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.14);
+}
+
+.leistungen-webanwendungen__service-number {
+  padding-top: 4px;
+  color: var(--applications-gold);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 750;
+}
+
+.leistungen-webanwendungen__service-check {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  color: var(--applications-black);
+  background: var(--applications-gold);
+  place-items: center;
+}
+
+.leistungen-webanwendungen__service-check svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.leistungen-webanwendungen__service h3 {
+  margin: 0;
+  color: var(--applications-white);
+  font-size: 0.78rem;
+  font-weight: 690;
+  line-height: 1.3;
+}
+
+.leistungen-webanwendungen__service p {
+  margin: 7px 0 0;
+  color: rgba(217, 217, 217, 0.55);
+  font-size: 0.63rem;
+  line-height: 1.5;
+}
+
+.leistungen-webanwendungen__visual {
+  position: relative;
+  min-width: 0;
+  min-height: 475px;
+  display: flex;
+  align-items: center;
+  padding: clamp(25px, 4vw, 54px);
+  border: 1px solid rgba(217, 217, 217, 0.17);
+  background:
+    linear-gradient(rgba(190, 157, 86, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 157, 86, 0.07) 1px, transparent 1px),
+    #181818;
+  background-size: 32px 32px;
+  box-shadow: 8px 8px 0 rgba(190, 157, 86, 0.4);
+}
+
+.leistungen-webanwendungen__portal {
+  width: 89%;
+  min-height: 340px;
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(217, 217, 217, 0.28);
+  background: #f4f4f1;
+  box-shadow: 8px 10px 30px rgba(0, 0, 0, 0.34);
+}
+
+.leistungen-webanwendungen__sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 13px 10px;
+  background: #202020;
+}
+
+.leistungen-webanwendungen__sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-webanwendungen__brand-symbol {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  color: var(--applications-gold);
+  place-items: center;
+}
+
+.leistungen-webanwendungen__brand-symbol svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.leistungen-webanwendungen__brand-name {
+  color: var(--applications-white);
+  font-size: 0.51rem;
+  font-weight: 720;
+}
+
+.leistungen-webanwendungen__navigation {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.leistungen-webanwendungen__navigation-item {
+  width: 78%;
+  height: 5px;
+  display: block;
+  background: rgba(217, 217, 217, 0.18);
+}
+
+.leistungen-webanwendungen__navigation-item--active {
+  width: 100%;
+  height: 19px;
+  border-left: 2px solid var(--applications-gold);
+  background: rgba(190, 157, 86, 0.18);
+}
+
+.leistungen-webanwendungen__navigation-item--short {
+  width: 52%;
+}
+
+.leistungen-webanwendungen__sidebar-user {
+  margin-top: auto;
+  padding-top: 11px;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 7px;
+  border-top: 1px solid rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-webanwendungen__sidebar-user > span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--applications-gold);
+}
+
+.leistungen-webanwendungen__sidebar-user div {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.leistungen-webanwendungen__sidebar-user div span {
+  width: 80%;
+  height: 3px;
+  display: block;
+  background: rgba(217, 217, 217, 0.32);
+}
+
+.leistungen-webanwendungen__sidebar-user div span:last-child {
+  width: 55%;
+}
+
+.leistungen-webanwendungen__portal-main {
+  padding: 17px;
+}
+
+.leistungen-webanwendungen__portal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leistungen-webanwendungen__portal-head > div {
+  display: grid;
+  gap: 7px;
+}
+
+.leistungen-webanwendungen__portal-eyebrow {
+  width: 40px;
+  height: 3px;
+  display: block;
+  background: var(--applications-gold);
+}
+
+.leistungen-webanwendungen__portal-title {
+  width: 95px;
+  height: 8px;
+  display: block;
+  background: var(--applications-black);
+}
+
+.leistungen-webanwendungen__portal-button {
+  width: 55px;
+  height: 20px;
+  display: block;
+  background: var(--applications-black);
+}
+
+.leistungen-webanwendungen__stats {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.leistungen-webanwendungen__stats > div {
+  min-height: 65px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--applications-grey);
+  background: var(--applications-white);
+}
+
+.leistungen-webanwendungen__stats > div > span {
+  width: 17px;
+  height: 3px;
+  display: block;
+  background: var(--applications-gold);
+}
+
+.leistungen-webanwendungen__stats strong {
+  color: var(--applications-black);
+  font-size: 0.83rem;
+}
+
+.leistungen-webanwendungen__stats small {
+  color: var(--applications-grey-dark);
+  font-size: 0.38rem;
+}
+
+.leistungen-webanwendungen__dashboard {
+  margin-top: 11px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8px;
+}
+
+.leistungen-webanwendungen__chart,
+.leistungen-webanwendungen__activity {
+  min-height: 155px;
+  border: 1px solid var(--applications-grey);
+  background: var(--applications-white);
+}
+
+.leistungen-webanwendungen__chart {
+  padding: 10px;
+}
+
+.leistungen-webanwendungen__chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leistungen-webanwendungen__chart-head span {
+  width: 50px;
+  height: 4px;
+  display: block;
+  background: var(--applications-grey);
+}
+
+.leistungen-webanwendungen__chart-head span:last-child {
+  width: 24px;
+}
+
+.leistungen-webanwendungen__bars {
+  height: 108px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 5px;
+  padding-top: 17px;
+  border-bottom: 1px solid var(--applications-grey);
+}
+
+.leistungen-webanwendungen__bars span {
+  width: 12%;
+  height: var(--bar-height);
+  display: block;
+  background: var(--applications-gold);
+  animation: applications-bar 4s ease-in-out infinite alternate;
+}
+
+.leistungen-webanwendungen__bars span:nth-child(even) {
+  background: var(--applications-black);
+  animation-delay: -2s;
+}
+
+.leistungen-webanwendungen__activity {
+  padding: 10px;
+}
+
+.leistungen-webanwendungen__activity-title {
+  width: 57px;
+  height: 4px;
+  display: block;
+  background: var(--applications-grey);
+}
+
+.leistungen-webanwendungen__activity > div {
+  min-height: 36px;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid var(--applications-grey);
+}
+
+.leistungen-webanwendungen__activity > div > span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--applications-grey);
+}
+
+.leistungen-webanwendungen__activity > div > i {
+  width: 75%;
+  height: 4px;
+  display: block;
+  background: var(--applications-grey);
+}
+
+.leistungen-webanwendungen__roles {
+  position: absolute;
+  z-index: 4;
+  right: clamp(20px, 3vw, 41px);
+  bottom: clamp(25px, 4vw, 48px);
+  width: min(225px, 40%);
+  padding: 10px;
+  border: 1px solid rgba(190, 157, 86, 0.5);
+  color: var(--applications-white);
+  background: #202020;
+  box-shadow: 7px 9px 23px rgba(0, 0, 0, 0.38);
+  animation: applications-roles-float 5s ease-in-out infinite;
+}
+
+.leistungen-webanwendungen__roles-head {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-webanwendungen__roles-head span {
+  font-size: 0.46rem;
+  font-weight: 720;
+}
+
+.leistungen-webanwendungen__roles-head small {
+  color: var(--applications-gold);
+  font-size: 0.4rem;
+  text-transform: uppercase;
+}
+
+.leistungen-webanwendungen__role {
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr) 35px;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.1);
+}
+
+.leistungen-webanwendungen__role:last-child {
+  border-bottom: 0;
+}
+
+.leistungen-webanwendungen__role-icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  color: var(--applications-gold);
+  place-items: center;
+}
+
+.leistungen-webanwendungen__role-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.leistungen-webanwendungen__role > div {
+  display: grid;
+  gap: 3px;
+}
+
+.leistungen-webanwendungen__role strong {
+  font-size: 0.43rem;
+  font-weight: 680;
+}
+
+.leistungen-webanwendungen__role > div > span {
+  overflow: hidden;
+  color: rgba(217, 217, 217, 0.48);
+  font-size: 0.35rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leistungen-webanwendungen__role-access {
+  height: 3px;
+  overflow: hidden;
+  background: rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-webanwendungen__role-access > span {
+  height: 100%;
+  display: block;
+  background: var(--applications-gold);
+  animation: applications-access 4s ease-in-out infinite alternate;
+}
+
+.leistungen-webanwendungen__visual-label {
+  position: absolute;
+  z-index: 5;
+  bottom: 14px;
+  left: 16px;
+  color: var(--applications-gold);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.5rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.leistungen-webanwendungen__visual-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.leistungen-webanwendungen__visual-corner--top {
+  top: 14px;
+  left: 14px;
+  border-top: 2px solid var(--applications-gold);
+  border-left: 2px solid var(--applications-gold);
+}
+
+.leistungen-webanwendungen__visual-corner--bottom {
+  right: 14px;
+  bottom: 14px;
+  border-right: 2px solid var(--applications-gold);
+  border-bottom: 2px solid var(--applications-gold);
+}
+
+.leistungen-webanwendungen__foundation {
+  margin-top: clamp(35px, 5vw, 55px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(217, 217, 217, 0.14);
+  border-bottom: 1px solid rgba(217, 217, 217, 0.14);
+}
+
+.leistungen-webanwendungen__foundation > div {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 13px;
+  padding: 14px clamp(13px, 2vw, 23px);
+  border-right: 1px solid rgba(217, 217, 217, 0.12);
+}
+
+.leistungen-webanwendungen__foundation > div:last-child {
+  border-right: 0;
+}
+
+.leistungen-webanwendungen__foundation-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  border: 1px solid rgba(190, 157, 86, 0.42);
+  color: var(--applications-gold);
+  place-items: center;
+  transform: rotate(45deg);
+}
+
+.leistungen-webanwendungen__foundation-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+  transform: rotate(-45deg);
+}
+
+.leistungen-webanwendungen__foundation > div > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.leistungen-webanwendungen__foundation strong {
+  color: var(--applications-white);
+  font-size: 0.66rem;
+  font-weight: 710;
+}
+
+.leistungen-webanwendungen__foundation > div > div > span {
+  color: rgba(217, 217, 217, 0.48);
+  font-size: 0.55rem;
+  line-height: 1.35;
+}
+
+@keyframes applications-circle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-45px, 30px, 0);
+  }
+}
+
+@keyframes applications-line {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes applications-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(80px, -20px, 0) scale(1.15);
+  }
+}
+
+@keyframes applications-code {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-22px, -14px, 0);
+  }
+}
+
+@keyframes applications-shape {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-20px, -27px, 0) rotate(225deg);
+  }
+}
+
+@keyframes applications-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: rotate(45deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(225deg) scale(1.08);
+  }
+}
+
+@keyframes applications-bar {
+  from {
+    transform: scaleY(0.85);
+    transform-origin: bottom;
+  }
+
+  to {
+    transform: scaleY(1.08);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes applications-access {
+  from {
+    opacity: 0.6;
+    transform: scaleX(0.82);
+    transform-origin: left;
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes applications-roles-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0.6deg);
+  }
+
+  50% {
+    transform: translate3d(0, -9px, 0) rotate(-0.6deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .leistungen-webanwendungen__layout {
+    grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .leistungen-webanwendungen__portal {
+    grid-template-columns: 85px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .leistungen-webanwendungen__container {
+    width: calc(100% - 40px);
+  }
+
+  .leistungen-webanwendungen__header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .leistungen-webanwendungen__introduction {
+    max-width: 620px;
+  }
+
+  .leistungen-webanwendungen__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .leistungen-webanwendungen__visual {
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leistungen-webanwendungen {
+    padding: 60px 0;
+  }
+
+  .leistungen-webanwendungen__container {
+    width: calc(100% - 28px);
+  }
+
+  .leistungen-webanwendungen__header h2 {
+    font-size: clamp(2.05rem, 10.5vw, 3.1rem);
+  }
+
+  .leistungen-webanwendungen__introduction {
+    padding-left: 15px;
+  }
+
+  .leistungen-webanwendungen__introduction p {
+    font-size: 0.74rem;
+  }
+
+  .leistungen-webanwendungen__service {
+    min-height: 91px;
+    grid-template-columns: 25px 20px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .leistungen-webanwendungen__service-check {
+    width: 20px;
+    height: 20px;
+  }
+
+  .leistungen-webanwendungen__service h3 {
+    font-size: 0.7rem;
+  }
+
+  .leistungen-webanwendungen__service p {
+    font-size: 0.57rem;
+  }
+
+  .leistungen-webanwendungen__visual {
+    min-height: 330px;
+    padding: 20px 13px;
+    box-shadow: 5px 5px 0 rgba(190, 157, 86, 0.4);
+  }
+
+  .leistungen-webanwendungen__portal {
+    width: 93%;
+    min-height: 238px;
+    grid-template-columns: 62px minmax(0, 1fr);
+  }
+
+  .leistungen-webanwendungen__sidebar {
+    padding: 9px 7px;
+  }
+
+  .leistungen-webanwendungen__brand-name {
+    display: none;
+  }
+
+  .leistungen-webanwendungen__portal-main {
+    padding: 11px;
+  }
+
+  .leistungen-webanwendungen__stats > div {
+    min-height: 47px;
+    padding: 5px;
+  }
+
+  .leistungen-webanwendungen__dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .leistungen-webanwendungen__activity {
+    display: none;
+  }
+
+  .leistungen-webanwendungen__chart {
+    min-height: 105px;
+  }
+
+  .leistungen-webanwendungen__bars {
+    height: 70px;
+  }
+
+  .leistungen-webanwendungen__roles {
+    right: 10px;
+    bottom: 27px;
+    width: 128px;
+    padding: 7px;
+  }
+
+  .leistungen-webanwendungen__roles-head span {
+    font-size: 0.38rem;
+  }
+
+  .leistungen-webanwendungen__role {
+    min-height: 34px;
+    grid-template-columns: 17px minmax(0, 1fr);
+  }
+
+  .leistungen-webanwendungen__role-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .leistungen-webanwendungen__role-access {
+    display: none;
+  }
+
+  .leistungen-webanwendungen__role strong {
+    font-size: 0.35rem;
+  }
+
+  .leistungen-webanwendungen__role > div > span {
+    font-size: 0.29rem;
+  }
+
+  .leistungen-webanwendungen__foundation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leistungen-webanwendungen__foundation > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .leistungen-webanwendungen__foundation > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(217, 217, 217, 0.12);
+  }
+
+  .leistungen-webanwendungen__foundation > div {
+    min-height: 94px;
+    padding: 12px 9px;
+  }
+
+  .leistungen-webanwendungen__foundation-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .leistungen-webanwendungen__foundation strong {
+    font-size: 0.56rem;
+  }
+
+  .leistungen-webanwendungen__foundation > div > div > span {
+    font-size: 0.48rem;
+  }
+
+  .leistungen-webanwendungen__code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leistungen-webanwendungen *,
+  .leistungen-webanwendungen *::before,
+  .leistungen-webanwendungen *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

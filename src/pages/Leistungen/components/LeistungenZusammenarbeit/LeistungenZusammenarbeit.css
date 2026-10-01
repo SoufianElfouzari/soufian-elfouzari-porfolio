@@ -1,0 +1,488 @@
+.leistungen-zusammenarbeit {
+  --collaboration-grey: #d9d9d9;
+  --collaboration-grey-dark: #747774;
+  --collaboration-gold: #be9d56;
+  --collaboration-gold-dark: #b3934d;
+  --collaboration-black: #111111;
+  --collaboration-white: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(65px, 7vw, 100px) 0;
+  color: var(--collaboration-black);
+  background: #ffffff;
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.leistungen-zusammenarbeit *,
+.leistungen-zusammenarbeit *::before,
+.leistungen-zusammenarbeit *::after {
+  box-sizing: border-box;
+}
+
+.leistungen-zusammenarbeit__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leistungen-zusammenarbeit__background::before {
+  position: absolute;
+  top: -200px;
+  right: -130px;
+  width: 470px;
+  height: 470px;
+  border: 1px solid rgba(190, 157, 86, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(190, 157, 86, 0.02),
+    0 0 0 110px rgba(17, 17, 17, 0.012);
+  content: "";
+  animation: collaboration-circle 16s ease-in-out infinite;
+}
+
+.leistungen-zusammenarbeit__background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leistungen-zusammenarbeit__background path {
+  fill: none;
+  stroke: rgba(190, 157, 86, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 7 17;
+  vector-effect: non-scaling-stroke;
+  animation: collaboration-line 27s linear infinite;
+}
+
+.leistungen-zusammenarbeit__glow {
+  position: absolute;
+  bottom: -90px;
+  left: 9%;
+  width: 360px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(190, 157, 86, 0.07);
+  filter: blur(85px);
+  animation: collaboration-glow 12s ease-in-out infinite alternate;
+}
+
+.leistungen-zusammenarbeit__code {
+  position: absolute;
+  right: 4%;
+  bottom: 7%;
+  color: rgba(17, 17, 17, 0.045);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.61rem;
+  animation: collaboration-code 10s ease-in-out infinite;
+}
+
+.leistungen-zusammenarbeit__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  margin: 0 auto;
+}
+
+.leistungen-zusammenarbeit__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 0.56fr);
+  align-items: end;
+  gap: clamp(48px, 8vw, 115px);
+}
+
+.leistungen-zusammenarbeit__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--collaboration-gold-dark);
+  font-size: 0.63rem;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.leistungen-zusammenarbeit__eyebrow > span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  background: var(--collaboration-gold);
+  transform: rotate(45deg);
+  animation: collaboration-dot 2.6s ease-in-out infinite;
+}
+
+.leistungen-zusammenarbeit__header h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.3rem, 4.2vw, 4.5rem);
+  font-weight: 680;
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+}
+
+.leistungen-zusammenarbeit__header h2 span {
+  display: block;
+  color: var(--collaboration-grey-dark);
+  font-weight: 520;
+}
+
+.leistungen-zusammenarbeit__header > p {
+  margin: 0;
+  padding-left: 19px;
+  border-left: 2px solid var(--collaboration-gold);
+  color: #666966;
+  font-size: 0.8rem;
+  line-height: 1.68;
+}
+
+.leistungen-zusammenarbeit__grid {
+  margin-top: clamp(40px, 6vw, 63px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.leistungen-zusammenarbeit__item {
+  position: relative;
+  min-width: 0;
+  min-height: 285px;
+  display: grid;
+  grid-template-rows: 39px 76px 94px minmax(0, 1fr);
+  padding: 24px clamp(16px, 2vw, 27px);
+  border-right: 1px solid rgba(17, 17, 17, 0.13);
+}
+
+.leistungen-zusammenarbeit__item:last-child {
+  border-right: 0;
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2) {
+  color: var(--collaboration-white);
+  background: var(--collaboration-black);
+}
+
+.leistungen-zusammenarbeit__item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leistungen-zusammenarbeit__number {
+  color: var(--collaboration-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.56rem;
+  font-weight: 760;
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2)
+  .leistungen-zusammenarbeit__number {
+  color: var(--collaboration-gold);
+}
+
+.leistungen-zusammenarbeit__icon {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  border: 1px solid rgba(190, 157, 86, 0.4);
+  color: var(--collaboration-gold-dark);
+  place-items: center;
+  transform: rotate(45deg);
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2)
+  .leistungen-zusammenarbeit__icon {
+  color: var(--collaboration-gold);
+}
+
+.leistungen-zusammenarbeit__icon svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+  transform: rotate(-45deg);
+}
+
+.leistungen-zusammenarbeit__item h3 {
+  align-self: start;
+  margin: 24px 0 0;
+  font-size: clamp(0.96rem, 1.45vw, 1.25rem);
+  font-weight: 680;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+.leistungen-zusammenarbeit__item p {
+  align-self: start;
+  margin: 4px 0 0;
+  color: #696c69;
+  font-size: 0.65rem;
+  line-height: 1.55;
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2) p {
+  color: rgba(217, 217, 217, 0.61);
+}
+
+.leistungen-zusammenarbeit__item code {
+  align-self: end;
+  padding-top: 16px;
+  border-top: 1px solid rgba(17, 17, 17, 0.13);
+  color: var(--collaboration-grey-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.54rem;
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2) code {
+  border-top-color: rgba(217, 217, 217, 0.14);
+  color: rgba(217, 217, 217, 0.48);
+}
+
+.leistungen-zusammenarbeit__item code span {
+  color: var(--collaboration-gold-dark);
+}
+
+.leistungen-zusammenarbeit__item:nth-child(2) code span {
+  color: var(--collaboration-gold);
+}
+
+.leistungen-zusammenarbeit__expectation {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  background:
+    linear-gradient(
+      115deg,
+      rgba(190, 157, 86, 0.09),
+      transparent 50%
+    ),
+    #f8f8f5;
+}
+
+.leistungen-zusammenarbeit__expectation-icon {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  color: var(--collaboration-black);
+  background: var(--collaboration-gold);
+  place-items: center;
+  transform: rotate(45deg);
+}
+
+.leistungen-zusammenarbeit__expectation-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+  transform: rotate(-45deg);
+}
+
+.leistungen-zusammenarbeit__expectation strong {
+  display: block;
+  font-size: 0.69rem;
+  font-weight: 720;
+}
+
+.leistungen-zusammenarbeit__expectation p {
+  max-width: 880px;
+  margin: 5px 0 0;
+  color: #6b6e6b;
+  font-size: 0.63rem;
+  line-height: 1.52;
+}
+
+.leistungen-zusammenarbeit__expectation-status {
+  color: var(--collaboration-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.54rem;
+  font-weight: 720;
+  white-space: nowrap;
+}
+
+@keyframes collaboration-circle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-45px, 30px, 0);
+  }
+}
+
+@keyframes collaboration-line {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes collaboration-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(80px, -20px, 0) scale(1.15);
+  }
+}
+
+@keyframes collaboration-code {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-22px, -14px, 0);
+  }
+}
+
+@keyframes collaboration-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: rotate(45deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(225deg) scale(1.08);
+  }
+}
+
+@media (max-width: 1000px) {
+  .leistungen-zusammenarbeit__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leistungen-zusammenarbeit__item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .leistungen-zusammenarbeit__item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.13);
+  }
+}
+
+@media (max-width: 760px) {
+  .leistungen-zusammenarbeit__container {
+    width: calc(100% - 40px);
+  }
+
+  .leistungen-zusammenarbeit__header {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .leistungen-zusammenarbeit__header > p {
+    max-width: 620px;
+  }
+
+  .leistungen-zusammenarbeit__expectation-status {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .leistungen-zusammenarbeit {
+    padding: 59px 0;
+  }
+
+  .leistungen-zusammenarbeit__container {
+    width: calc(100% - 28px);
+  }
+
+  .leistungen-zusammenarbeit__header h2 {
+    font-size: clamp(2.05rem, 10.5vw, 3.1rem);
+  }
+
+  .leistungen-zusammenarbeit__header > p {
+    padding-left: 15px;
+    font-size: 0.73rem;
+  }
+
+  .leistungen-zusammenarbeit__item {
+    min-height: 310px;
+    grid-template-rows: 31px 83px 112px minmax(0, 1fr);
+    padding: 17px 11px;
+  }
+
+  .leistungen-zusammenarbeit__icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .leistungen-zusammenarbeit__icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .leistungen-zusammenarbeit__item h3 {
+    margin-top: 21px;
+    font-size: 0.82rem;
+  }
+
+  .leistungen-zusammenarbeit__item p {
+    margin-top: 3px;
+    font-size: 0.55rem;
+    line-height: 1.5;
+  }
+
+  .leistungen-zusammenarbeit__item code {
+    font-size: 0.47rem;
+  }
+
+  .leistungen-zusammenarbeit__expectation {
+    grid-template-columns: 31px minmax(0, 1fr);
+    gap: 13px;
+    padding: 14px 11px;
+  }
+
+  .leistungen-zusammenarbeit__expectation-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .leistungen-zusammenarbeit__expectation strong {
+    font-size: 0.62rem;
+  }
+
+  .leistungen-zusammenarbeit__expectation p {
+    font-size: 0.55rem;
+  }
+
+  .leistungen-zusammenarbeit__code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leistungen-zusammenarbeit *,
+  .leistungen-zusammenarbeit *::before,
+  .leistungen-zusammenarbeit *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,956 @@
+.leistungen-saas {
+  --saas-grey: #d9d9d9;
+  --saas-grey-dark: #747774;
+  --saas-gold: #be9d56;
+  --saas-gold-dark: #b3934d;
+  --saas-black: #111111;
+  --saas-white: #ffffff;
+  --saas-background: #eee3ca;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(70px, 8vw, 115px) 0;
+  color: var(--saas-black);
+  background: var(--saas-background);
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.leistungen-saas *,
+.leistungen-saas *::before,
+.leistungen-saas *::after {
+  box-sizing: border-box;
+}
+
+.leistungen-saas__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leistungen-saas__background::before {
+  position: absolute;
+  top: -210px;
+  right: -130px;
+  width: 510px;
+  height: 510px;
+  border: 1px solid rgba(17, 17, 17, 0.07);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 60px rgba(17, 17, 17, 0.012),
+    0 0 0 120px rgba(255, 255, 255, 0.08);
+  content: "";
+  animation: saas-circle 17s ease-in-out infinite;
+}
+
+.leistungen-saas__background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leistungen-saas__background path {
+  fill: none;
+  stroke: rgba(179, 147, 77, 0.24);
+  stroke-width: 1;
+  stroke-dasharray: 7 17;
+  vector-effect: non-scaling-stroke;
+  animation: saas-line 27s linear infinite;
+}
+
+.leistungen-saas__background path:last-child {
+  stroke: rgba(17, 17, 17, 0.05);
+  stroke-dasharray: 4 20;
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+.leistungen-saas__glow {
+  position: absolute;
+  bottom: -90px;
+  left: 8%;
+  width: 390px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  filter: blur(90px);
+  animation: saas-glow 12s ease-in-out infinite alternate;
+}
+
+.leistungen-saas__code {
+  position: absolute;
+  color: rgba(17, 17, 17, 0.05);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.61rem;
+  white-space: nowrap;
+  animation: saas-code 11s ease-in-out infinite;
+}
+
+.leistungen-saas__code--one {
+  top: 18%;
+  right: 3%;
+}
+
+.leistungen-saas__code--two {
+  bottom: 8%;
+  left: 3%;
+  animation-delay: -5.5s;
+}
+
+.leistungen-saas__shape {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--saas-gold-dark);
+  transform: rotate(45deg);
+  animation: saas-shape 9s ease-in-out infinite;
+}
+
+.leistungen-saas__shape--one {
+  top: 31%;
+  left: 4%;
+}
+
+.leistungen-saas__shape--two {
+  right: 5%;
+  bottom: 24%;
+  animation-delay: -4.5s;
+}
+
+.leistungen-saas__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  margin: 0 auto;
+}
+
+.leistungen-saas__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.58fr);
+  align-items: end;
+  gap: clamp(48px, 8vw, 115px);
+}
+
+.leistungen-saas__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #7c622e;
+  font-size: 0.63rem;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.leistungen-saas__eyebrow > span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  background: var(--saas-gold-dark);
+  transform: rotate(45deg);
+  animation: saas-dot 2.6s ease-in-out infinite;
+}
+
+.leistungen-saas__header h2 {
+  margin: 18px 0 0;
+  color: var(--saas-black);
+  font-size: clamp(2.35rem, 4.3vw, 4.6rem);
+  font-weight: 680;
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+}
+
+.leistungen-saas__header h2 span {
+  display: block;
+  color: #7c755f;
+  font-weight: 520;
+}
+
+.leistungen-saas__introduction {
+  padding-left: 19px;
+  border-left: 2px solid var(--saas-gold-dark);
+}
+
+.leistungen-saas__introduction p {
+  margin: 0;
+  color: #625d4e;
+  font-size: 0.82rem;
+  line-height: 1.68;
+}
+
+.leistungen-saas__introduction a {
+  width: fit-content;
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--saas-black);
+  font-size: 0.66rem;
+  font-weight: 740;
+  text-decoration: none;
+}
+
+.leistungen-saas__introduction a svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition: transform 170ms ease;
+}
+
+.leistungen-saas__introduction a:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.leistungen-saas__layout {
+  margin-top: clamp(43px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(350px, 0.72fr);
+  align-items: stretch;
+  gap: clamp(35px, 5vw, 75px);
+}
+
+.leistungen-saas__visual {
+  position: relative;
+  min-width: 0;
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  padding: clamp(25px, 4vw, 54px);
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.35);
+  background-size: 32px 32px;
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.2);
+}
+
+.leistungen-saas__product-window {
+  width: 88%;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  background: #f8f8f5;
+  box-shadow: 8px 11px 28px rgba(17, 17, 17, 0.17);
+}
+
+.leistungen-saas__window-head {
+  min-height: 38px;
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 11px;
+  color: var(--saas-grey);
+  background: var(--saas-black);
+}
+
+.leistungen-saas__window-head > div {
+  display: flex;
+  gap: 5px;
+}
+
+.leistungen-saas__window-head > div span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 0.34);
+}
+
+.leistungen-saas__window-head > div span:first-child {
+  background: var(--saas-gold);
+}
+
+.leistungen-saas__window-title {
+  overflow: hidden;
+  color: rgba(217, 217, 217, 0.57);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.43rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leistungen-saas__window-status {
+  color: var(--saas-gold);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.4rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.leistungen-saas__architecture {
+  padding: 20px;
+}
+
+.leistungen-saas__architecture-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--saas-grey);
+}
+
+.leistungen-saas__architecture-head > span {
+  font-size: 0.66rem;
+  font-weight: 720;
+}
+
+.leistungen-saas__architecture-head small {
+  color: var(--saas-grey-dark);
+  font-size: 0.43rem;
+}
+
+.leistungen-saas__layers {
+  padding: 17px 0;
+  display: grid;
+  gap: 9px;
+}
+
+.leistungen-saas__layer {
+  position: relative;
+  min-height: 56px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 23px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid var(--saas-grey);
+  background: var(--saas-white);
+}
+
+.leistungen-saas__layer--product {
+  margin-right: 0;
+  margin-left: 0;
+  border-left: 3px solid var(--saas-gold-dark);
+}
+
+.leistungen-saas__layer--logic {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.leistungen-saas__layer--api {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.leistungen-saas__layer--data {
+  margin-right: 48px;
+  margin-left: 48px;
+  color: var(--saas-white);
+  background: var(--saas-black);
+}
+
+.leistungen-saas__layer-number {
+  color: var(--saas-gold-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.46rem;
+  font-weight: 750;
+}
+
+.leistungen-saas__layer--data .leistungen-saas__layer-number {
+  color: var(--saas-gold);
+}
+
+.leistungen-saas__layer > div {
+  display: grid;
+  gap: 4px;
+}
+
+.leistungen-saas__layer strong {
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.leistungen-saas__layer > div > span {
+  color: var(--saas-grey-dark);
+  font-size: 0.4rem;
+}
+
+.leistungen-saas__layer--data > div > span {
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.leistungen-saas__layer-status {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  color: var(--saas-black);
+  background: var(--saas-gold);
+  place-items: center;
+}
+
+.leistungen-saas__layer-status svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.leistungen-saas__layer-connector {
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  left: 50%;
+  width: 1px;
+  height: 9px;
+  background: var(--saas-gold-dark);
+}
+
+.leistungen-saas__architecture-footer {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 11px;
+  border-top: 1px solid var(--saas-grey);
+  color: var(--saas-grey-dark);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.42rem;
+}
+
+.leistungen-saas__architecture-footer strong {
+  color: var(--saas-gold-dark);
+}
+
+.leistungen-saas__subscription {
+  position: absolute;
+  z-index: 4;
+  right: clamp(20px, 3vw, 41px);
+  bottom: clamp(28px, 4vw, 50px);
+  width: min(230px, 41%);
+  padding: 13px;
+  border: 1px solid #343434;
+  color: var(--saas-white);
+  background: var(--saas-black);
+  box-shadow: 7px 10px 24px rgba(17, 17, 17, 0.26);
+  animation: saas-subscription-float 5s ease-in-out infinite;
+}
+
+.leistungen-saas__subscription-head {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-saas__subscription-icon {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  border: 1px solid rgba(190, 157, 86, 0.42);
+  color: var(--saas-gold);
+  place-items: center;
+}
+
+.leistungen-saas__subscription-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.leistungen-saas__subscription-head > div {
+  display: grid;
+  gap: 3px;
+}
+
+.leistungen-saas__subscription-head strong {
+  font-size: 0.48rem;
+  font-weight: 700;
+}
+
+.leistungen-saas__subscription-head > div > span {
+  color: rgba(217, 217, 217, 0.48);
+  font-size: 0.37rem;
+}
+
+.leistungen-saas__subscription-head small {
+  color: var(--saas-gold);
+  font-size: 0.4rem;
+  text-transform: uppercase;
+}
+
+.leistungen-saas__subscription-data {
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.leistungen-saas__subscription-data > div {
+  display: grid;
+  gap: 4px;
+}
+
+.leistungen-saas__subscription-data > div + div {
+  padding-left: 12px;
+  border-left: 1px solid rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-saas__subscription-data span {
+  color: rgba(217, 217, 217, 0.45);
+  font-size: 0.37rem;
+}
+
+.leistungen-saas__subscription-data strong {
+  color: var(--saas-white);
+  font-size: 0.72rem;
+}
+
+.leistungen-saas__subscription-progress {
+  height: 3px;
+  display: block;
+  overflow: hidden;
+  background: rgba(217, 217, 217, 0.13);
+}
+
+.leistungen-saas__subscription-progress span {
+  width: 78%;
+  height: 100%;
+  display: block;
+  background: var(--saas-gold);
+  animation: saas-progress 4s ease-in-out infinite alternate;
+}
+
+.leistungen-saas__visual-label {
+  position: absolute;
+  z-index: 5;
+  bottom: 14px;
+  left: 16px;
+  color: #79602e;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.5rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.leistungen-saas__visual-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.leistungen-saas__visual-corner--top {
+  top: 14px;
+  left: 14px;
+  border-top: 2px solid var(--saas-gold-dark);
+  border-left: 2px solid var(--saas-gold-dark);
+}
+
+.leistungen-saas__visual-corner--bottom {
+  right: 14px;
+  bottom: 14px;
+  border-right: 2px solid var(--saas-gold-dark);
+  border-bottom: 2px solid var(--saas-gold-dark);
+}
+
+.leistungen-saas__services {
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.leistungen-saas__service {
+  min-height: 98px;
+  display: grid;
+  grid-template-columns: 29px 23px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding: 17px 4px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.leistungen-saas__service-number {
+  padding-top: 4px;
+  color: #79602e;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 750;
+}
+
+.leistungen-saas__service-check {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  color: var(--saas-white);
+  background: var(--saas-black);
+  place-items: center;
+}
+
+.leistungen-saas__service-check svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.leistungen-saas__service h3 {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 690;
+  line-height: 1.3;
+}
+
+.leistungen-saas__service p {
+  margin: 7px 0 0;
+  color: #625e50;
+  font-size: 0.63rem;
+  line-height: 1.5;
+}
+
+.leistungen-saas__foundation {
+  margin-top: clamp(35px, 5vw, 55px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(17, 17, 17, 0.14);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.leistungen-saas__foundation > div {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 13px;
+  padding: 14px clamp(13px, 2vw, 23px);
+  border-right: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.leistungen-saas__foundation > div:last-child {
+  border-right: 0;
+}
+
+.leistungen-saas__foundation-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  color: #735a29;
+  background: rgba(255, 255, 255, 0.22);
+  place-items: center;
+  transform: rotate(45deg);
+}
+
+.leistungen-saas__foundation-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+  transform: rotate(-45deg);
+}
+
+.leistungen-saas__foundation > div > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.leistungen-saas__foundation strong {
+  font-size: 0.66rem;
+  font-weight: 710;
+}
+
+.leistungen-saas__foundation > div > div > span {
+  color: #6e6858;
+  font-size: 0.55rem;
+  line-height: 1.35;
+}
+
+@keyframes saas-circle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-45px, 30px, 0);
+  }
+}
+
+@keyframes saas-line {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes saas-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(80px, -20px, 0) scale(1.15);
+  }
+}
+
+@keyframes saas-code {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-22px, -14px, 0);
+  }
+}
+
+@keyframes saas-shape {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-20px, -27px, 0) rotate(225deg);
+  }
+}
+
+@keyframes saas-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: rotate(45deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(225deg) scale(1.08);
+  }
+}
+
+@keyframes saas-subscription-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0.6deg);
+  }
+
+  50% {
+    transform: translate3d(0, -9px, 0) rotate(-0.6deg);
+  }
+}
+
+@keyframes saas-progress {
+  from {
+    opacity: 0.65;
+    transform: scaleX(0.83);
+    transform-origin: left;
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@media (max-width: 1000px) {
+  .leistungen-saas__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .leistungen-saas__container {
+    width: calc(100% - 40px);
+  }
+
+  .leistungen-saas__header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .leistungen-saas__introduction {
+    max-width: 620px;
+  }
+
+  .leistungen-saas__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .leistungen-saas__visual {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leistungen-saas {
+    padding: 60px 0;
+  }
+
+  .leistungen-saas__container {
+    width: calc(100% - 28px);
+  }
+
+  .leistungen-saas__header h2 {
+    font-size: clamp(2.05rem, 10.5vw, 3.1rem);
+  }
+
+  .leistungen-saas__introduction {
+    padding-left: 15px;
+  }
+
+  .leistungen-saas__introduction p {
+    font-size: 0.74rem;
+  }
+
+  .leistungen-saas__visual {
+    min-height: 345px;
+    padding: 19px 12px;
+    box-shadow: 5px 5px 0 rgba(17, 17, 17, 0.2);
+  }
+
+  .leistungen-saas__product-window {
+    width: 93%;
+  }
+
+  .leistungen-saas__window-head {
+    min-height: 30px;
+    grid-template-columns: 42px minmax(0, 1fr) 40px;
+    padding: 0 7px;
+  }
+
+  .leistungen-saas__architecture {
+    padding: 11px;
+  }
+
+  .leistungen-saas__layer {
+    min-height: 42px;
+    grid-template-columns: 21px minmax(0, 1fr) 18px;
+    padding: 6px 8px;
+  }
+
+  .leistungen-saas__layer--logic {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .leistungen-saas__layer--api {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .leistungen-saas__layer--data {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  .leistungen-saas__subscription {
+    right: 9px;
+    bottom: 28px;
+    width: 135px;
+    padding: 8px;
+  }
+
+  .leistungen-saas__subscription-head {
+    grid-template-columns: 22px minmax(0, 1fr);
+  }
+
+  .leistungen-saas__subscription-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .leistungen-saas__subscription-head small {
+    display: none;
+  }
+
+  .leistungen-saas__subscription-data {
+    min-height: 46px;
+  }
+
+  .leistungen-saas__service {
+    min-height: 94px;
+    grid-template-columns: 25px 20px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .leistungen-saas__service-check {
+    width: 20px;
+    height: 20px;
+  }
+
+  .leistungen-saas__service h3 {
+    font-size: 0.7rem;
+  }
+
+  .leistungen-saas__service p {
+    font-size: 0.57rem;
+  }
+
+  .leistungen-saas__foundation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leistungen-saas__foundation > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .leistungen-saas__foundation > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+  }
+
+  .leistungen-saas__foundation > div {
+    min-height: 94px;
+    padding: 12px 9px;
+  }
+
+  .leistungen-saas__foundation-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .leistungen-saas__foundation strong {
+    font-size: 0.56rem;
+  }
+
+  .leistungen-saas__foundation > div > div > span {
+    font-size: 0.48rem;
+  }
+
+  .leistungen-saas__code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leistungen-saas *,
+  .leistungen-saas *::before,
+  .leistungen-saas *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
