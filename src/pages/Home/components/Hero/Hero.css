@@ -1402,3 +1402,21 @@
     10px 13px 20px rgba(190,151,65,.44),
     inset 0 1px 0 rgba(255,255,255,.14);
 }
+
+/* Clearly offset shadow: below and right, never over the button face */
+.hero__button--primary {
+  background: #151619;
+  box-shadow:
+    9px 11px 0 rgba(180, 137, 51, .18),
+    12px 15px 17px rgba(178, 132, 45, .42),
+    5px 7px 10px rgba(0, 0, 0, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .10);
+}
+.hero__button--primary:hover {
+  background: #1b1c20;
+  box-shadow:
+    11px 13px 0 rgba(180, 137, 51, .20),
+    15px 18px 20px rgba(178, 132, 45, .46),
+    7px 9px 13px rgba(0, 0, 0, .25),
+    inset 0 1px 0 rgba(255, 255, 255, .12);
+}
