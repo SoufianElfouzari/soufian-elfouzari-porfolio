@@ -2134,3 +2134,13 @@
   .hero__idea-arrow-line,
   .hero__idea-arrow-head { animation: none; stroke-dashoffset: 0; }
 }
+
+/* Refine loop and arrowhead into a smooth handwritten stroke */
+.hero__idea-arrow-line,
+.hero__idea-arrow-head {
+  stroke-width: 1.75;
+  stroke: #d5a04b;
+}
+.hero__idea-arrow-head {
+  stroke-width: 1.6;
+}
