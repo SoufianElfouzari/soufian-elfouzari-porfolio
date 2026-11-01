@@ -469,8 +469,8 @@ function Hero() {
           <svg className="hero__light-trail hero__light-trail--behind" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <filter id="heroGlow-behind" x="-150%" y="-150%" width="400%" height="400%" colorInterpolationFilters="sRGB">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="soft"/>
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="wide"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="soft"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="wide"/>
                 <feMerge>
                   <feMergeNode in="wide"/>
                   <feMergeNode in="soft"/>
@@ -492,8 +492,8 @@ function Hero() {
           <svg className="hero__light-trail hero__light-trail--front" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <filter id="heroGlow-front" x="-150%" y="-150%" width="400%" height="400%" colorInterpolationFilters="sRGB">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="soft"/>
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="wide"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="soft"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="wide"/>
                 <feMerge>
                   <feMergeNode in="wide"/>
                   <feMergeNode in="soft"/>
