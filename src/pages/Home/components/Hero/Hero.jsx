@@ -530,7 +530,13 @@ function Hero() {
         </div>
         <div className="hero__location-widget"><span>⌖</span> Kassel, Deutschland</div>
         <div className="hero__clean-note">Clean<br/>Code <span>↘</span></div>
-        <div className="hero__idea-note">Ideen<br/>in Lösungen<br/>verwandeln. <span>↗</span></div>
+        <div className="hero__idea-note">
+          <svg className="hero__idea-arrow" viewBox="0 0 115 145" fill="none" aria-hidden="true">
+            <path className="hero__idea-arrow-line" d="M 51 4 C 39 27 34 48 35 69 C 35 83 21 87 17 79 C 12 69 29 60 48 63 C 76 67 88 52 93 69 C 100 87 79 105 68 117"/>
+            <path className="hero__idea-arrow-head" d="M 56 107 L 68 117 L 82 108"/>
+          </svg>
+          <span className="hero__idea-note-text">Ideen<br/>in Lösungen<br/>verwandeln.</span>
+        </div>
       </div>
       <svg className="hero__bottom-wave" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 115 C205 185 365 153 550 116 S825 23 1030 73 S1295 165 1440 75 V190 H0Z" fill="#d9e9ff" opacity=".72"/>
