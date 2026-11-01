@@ -2085,3 +2085,52 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__light-trail path { animation: none; stroke-dashoffset: 0; }
 }
+
+/* Handwritten note with a self-drawing looping arrow */
+.hero__idea-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  color: #416bb2;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.12;
+  transform: rotate(-12deg);
+}
+.hero__idea-note-text {
+  display: block;
+  margin: -5px 0 0;
+  color: #416bb2;
+  font: inherit;
+  letter-spacing: .015em;
+}
+.hero__idea-arrow {
+  display: block;
+  width: 115px;
+  height: 145px;
+  margin-left: 12px;
+  overflow: visible;
+  transform: rotate(12deg);
+}
+.hero__idea-arrow-line,
+.hero__idea-arrow-head {
+  stroke: #d49b3b;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: heroIdeaDraw 2.1s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero__idea-arrow-head {
+  animation-delay: 1.8s;
+  animation-duration: .45s;
+}
+@keyframes heroIdeaDraw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__idea-arrow-line,
+  .hero__idea-arrow-head { animation: none; stroke-dashoffset: 0; }
+}
