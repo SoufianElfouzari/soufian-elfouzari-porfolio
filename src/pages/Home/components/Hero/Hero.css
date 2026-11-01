@@ -1968,3 +1968,35 @@
     bottom: -30px;
   }
 }
+
+/* Show the full upper body instead of zooming/cropping the portrait */
+.hero__photo {
+  object-fit: contain;
+  object-position: center bottom;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%);
+}
+@media (min-width: 1101px) {
+  .hero__visual { height: 490px; min-height: 490px; }
+  .hero__photo-frame {
+    width: min(110%, 520px);
+    height: 570px;
+    right: clamp(-45px, -1.5vw, -15px);
+    bottom: -35px;
+  }
+}
+@media (min-width: 881px) and (max-width: 1100px) {
+  .hero__visual { height: 450px; min-height: 450px; }
+  .hero__photo-frame {
+    width: min(105%, 445px);
+    height: 510px;
+    right: -20px;
+    bottom: -30px;
+  }
+}
+@media (max-width: 880px) and (min-width: 561px) {
+  .hero__photo-frame { height: 490px; bottom: -10px; }
+}
+@media (max-width: 560px) {
+  .hero__photo-frame { height: 390px; bottom: -8px; }
+}
