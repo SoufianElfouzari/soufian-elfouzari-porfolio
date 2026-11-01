@@ -665,3 +665,19 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
 .site-header__navigation-link--active::after {
   transform: none;
 }
+
+/* Glossy gold active navigation indicator */
+.site-header__navigation-link::after {
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #bf8725 0%, #e7b54f 28%, #fff9dd 50%, #f1c766 68%, #c28a29 100%);
+  box-shadow: 0 0 3px rgba(255,246,204,.95), 0 0 7px rgba(238,184,70,.65), 0 0 12px rgba(231,176,63,.25);
+  transform: scaleX(.5);
+  transition: opacity 180ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+.site-header__navigation-link:hover::after,
+.site-header__navigation-link--active::after { transform: scaleX(1); }
