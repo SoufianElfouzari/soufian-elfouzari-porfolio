@@ -608,3 +608,35 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
 @media (max-width:1080px) { .site-header__inner {width:min(calc(100% - 36px),1240px);grid-template-columns:minmax(188px,1fr) auto minmax(155px,1fr);gap:13px;} .site-header__navigation-list{gap:18px;} .site-header__brand-logo{width:43px;height:43px;flex-basis:43px;} .site-header__brand-logo img{width:36px;height:36px;} }
 @media (max-width:900px) { .site-header{--header-height:62px;} .site-header__inner{display:flex;justify-content:space-between;} .site-header__desktop-navigation,.site-header__contact-link{display:none;} .site-header__menu-button{display:inline-flex;width:35px;height:35px;border-radius:50%;} .site-header__theme-button{width:35px;height:35px;} }
 @media (max-width:520px) { .site-header__inner{width:calc(100% - 28px);} .site-header__brand-logo{width:42px;height:42px;flex-basis:42px;} .site-header__brand-logo img{width:35px;height:35px;} .site-header__brand-name{font-size:.77rem;} .site-header__brand-role{font-size:.52rem;} .site-header__actions{gap:7px;} }
+
+/* Larger, more legible header proportions */
+.site-header { --header-height: 84px; }
+.site-header__brand { gap: 15px; }
+.site-header__brand-logo { width: 59px; height: 59px; flex-basis: 59px; }
+.site-header__brand-logo img { width: 49px; height: 49px; }
+.site-header__brand-name { font-size: .98rem; }
+.site-header__brand-role { font-size: .66rem; }
+.site-header__navigation-link { font-size: .88rem; padding: 14px 0; }
+.site-header__navigation-list { gap: clamp(24px, 2.7vw, 39px); }
+.site-header__contact-link { min-height: 49px; padding: 0 23px; font-size: .86rem; }
+.site-header__contact-link svg { width: 18px; height: 18px; }
+.site-header__theme-button { width: 43px; height: 43px; }
+.site-header__theme-button svg { width: 20px; height: 20px; }
+@media (max-width: 1080px) {
+  .site-header__brand-logo { width: 54px; height: 54px; flex-basis: 54px; }
+  .site-header__brand-logo img { width: 45px; height: 45px; }
+  .site-header__navigation-list { gap: 20px; }
+}
+@media (max-width: 900px) {
+  .site-header { --header-height: 76px; }
+  .site-header__brand-logo { width: 52px; height: 52px; flex-basis: 52px; }
+  .site-header__brand-logo img { width: 44px; height: 44px; }
+  .site-header__theme-button, .site-header__menu-button { width: 42px; height: 42px; }
+}
+@media (max-width: 520px) {
+  .site-header { --header-height: 72px; }
+  .site-header__brand-logo { width: 49px; height: 49px; flex-basis: 49px; }
+  .site-header__brand-logo img { width: 41px; height: 41px; }
+  .site-header__brand-name { font-size: .86rem; }
+  .site-header__brand-role { font-size: .57rem; }
+}
