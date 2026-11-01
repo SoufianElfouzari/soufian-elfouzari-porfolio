@@ -2036,3 +2036,8 @@
     bottom: -115px;
   }
 }
+
+/* Slightly larger portrait, retaining the lower-body crop and 2D rotation */
+.hero__photo {
+  scale: 1.12;
+}
