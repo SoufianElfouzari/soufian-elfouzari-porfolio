@@ -1902,3 +1902,16 @@
     bottom: -40px;
   }
 }
+
+/* Keep all floating decorations behind the foreground portrait */
+.hero__floating-ui { z-index: 2; }
+.hero__container { z-index: 3; }
+.hero__visual { z-index: 5; isolation: auto; }
+.hero__photo-frame { z-index: 6; }
+.hero__photo { position: relative; z-index: 7; }
+.hero__code-widget,
+.hero__idea-widget,
+.hero__stats-widget,
+.hero__location-widget,
+.hero__clean-note,
+.hero__idea-note { z-index: 1; }
