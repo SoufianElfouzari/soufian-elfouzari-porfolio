@@ -386,6 +386,14 @@ function Hero() {
       className="hero"
       aria-labelledby="hero-title"
     >
+      <div className="hero__city-scene" aria-hidden="true">
+        <img
+          src="/images/city-hero.png"
+          alt=""
+          loading="eager"
+          decoding="async"
+        />
+      </div>
 
       <div className="hero__container">
         <div className="hero__content">
@@ -458,15 +466,6 @@ function Hero() {
         </div>
 
         <div className="hero__visual">
-          <div className="hero__city-scene" aria-hidden="true">
-            <img
-              src="/images/city-hero.png"
-              alt=""
-              loading="eager"
-              decoding="async"
-            />
-          </div>
-
           <div className="hero__photo-frame">
             <img
               className="hero__photo"

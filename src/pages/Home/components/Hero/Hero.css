@@ -1378,41 +1378,86 @@
 .hero { background: linear-gradient(115deg, #ffffff 0%, #ffffff 62%, #faf9f6 100%); }
 
 
-/* Hero city scene and foreground portrait */
-.hero__visual {
-  position: relative;
-  isolation: isolate;
-  z-index: 2;
-  max-width: 640px;
-  min-height: 610px;
+
+/* Hero composition: integrated skyline, foreground cutout and low card row */
+.hero {
+  min-height: 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 55% 70% at 83% 38%, rgba(213, 229, 249, .70), transparent 74%),
+    linear-gradient(112deg, #fff 0%, #fff 48%, #f5f9fe 100%);
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 64px), 1380px);
+  min-height: 590px;
+  padding: 48px 0 110px;
+  grid-template-columns: minmax(0, .99fr) minmax(0, 1.01fr);
+  gap: clamp(25px, 3.7vw, 62px);
+  align-items: center;
+}
+
+.hero__content {
+  z-index: 4;
+  width: 100%;
+  max-width: 650px;
+  align-self: center;
+}
+
+.hero__intro {
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  max-width: none;
+  font-size: clamp(43px, 4.4vw, 76px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -.072em;
+}
+
+.hero__title .hero__title-main {
+  color: #080b12;
+  -webkit-text-fill-color: #080b12;
+}
+
+.hero__title .hero__title-location {
+  color: #c49b55;
+  -webkit-text-fill-color: #c49b55;
+}
+
+.hero__description {
+  max-width: 515px;
+  margin-top: 25px;
+  line-height: 1.65;
+}
+
+.hero__actions {
+  margin-top: 30px;
+}
+
+.hero__socials {
+  margin-top: 35px;
 }
 
 .hero__city-scene {
   position: absolute;
   z-index: 0;
-  right: -72px;
-  bottom: 10px;
-  width: calc(100% + 90px);
-  height: 330px;
+  right: 0;
+  bottom: 38px;
+  width: min(68vw, 1080px);
+  height: min(510px, 72%);
   overflow: hidden;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    #000 19%,
-    #000 94%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    #000 19%,
-    #000 94%,
-    transparent 100%
-  );
+  clip-path: ellipse(94% 90% at 86% 120%);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 76%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 0%, #000 76%, transparent 100%);
 }
 
 .hero__city-scene::after {
@@ -1421,9 +1466,10 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, .86) 0%,
-    rgba(255, 255, 255, .25) 25%,
-    transparent 68%
+    rgba(255, 255, 255, .93) 0%,
+    rgba(255, 255, 255, .55) 22%,
+    rgba(255, 255, 255, .06) 46%,
+    transparent 72%
   );
   pointer-events: none;
 }
@@ -1433,15 +1479,32 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 57%;
-  opacity: .92;
+  object-position: center 58%;
+}
+
+.hero__visual {
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  height: 420px;
+  min-height: 420px;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
 .hero__photo-frame {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  width: min(90%, 490px);
-  height: 590px;
+  right: clamp(0px, 4.8vw, 80px);
+  bottom: -96px;
+  width: min(95%, 440px);
+  height: clamp(425px, 32vw, 515px);
   aspect-ratio: auto;
   overflow: visible;
   border: 0;
@@ -1462,73 +1525,153 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  -webkit-mask-image: radial-gradient(
-    ellipse 80% 83% at 50% 51%,
-    #000 66%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 80% 83% at 50% 51%,
-    #000 66%,
-    transparent 100%
-  );
-  filter: drop-shadow(0 9px 16px rgba(24, 34, 45, .10));
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 84%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 84%, transparent 100%);
+  filter: drop-shadow(0 6px 16px rgba(20, 28, 40, .10));
 }
 
-@media (max-width: 1100px) {
-  .hero__visual {
-    max-width: 560px;
-    min-height: 545px;
-  }
+.hero__service-grid {
+  position: relative;
+  z-index: 6;
+  width: min(calc(100% - 64px), 1380px);
+  margin: -80px auto 36px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 
+@media (min-width: 1450px) {
+  .hero__container {
+    min-height: 630px;
+  }
   .hero__city-scene {
-    right: -35px;
-    width: calc(100% + 35px);
-    height: 290px;
+    bottom: 38px;
   }
+}
 
+@media (max-width: 1100px) and (min-width: 881px) {
+  .hero__container {
+    min-height: 565px;
+    padding: 52px 0 100px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    gap: 28px;
+  }
+  .hero__title {
+    font-size: clamp(43px, 4.6vw, 55px);
+  }
+  .hero__visual {
+    height: 380px;
+    min-height: 380px;
+  }
   .hero__photo-frame {
-    width: min(91%, 425px);
-    height: 530px;
+    right: 0;
+    bottom: -92px;
+    width: min(98%, 390px);
+    height: 460px;
+  }
+  .hero__city-scene {
+    width: 72%;
+    height: 57%;
+  }
+  .hero__service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: -65px;
+  }
+  .hero__service-card {
+    gap: 10px;
+    padding: 16px 12px;
+  }
+  .hero__service-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+  .hero__service-copy strong {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 880px) {
+  .hero__container {
+    width: min(calc(100% - 40px), 700px);
+    min-height: 0;
+    padding: 56px 0 54px;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero__content {
+    max-width: 100%;
+  }
+  .hero__title {
+    font-size: clamp(43px, 7.3vw, 66px);
+  }
   .hero__visual {
-    max-width: 600px;
-    min-height: 510px;
-  }
-
-  .hero__city-scene {
-    right: -10px;
-    bottom: 0;
     width: 100%;
-    height: 280px;
+    max-width: 600px;
+    height: 410px;
+    min-height: 410px;
+    justify-self: center;
+    align-self: center;
   }
-
   .hero__photo-frame {
-    width: min(86%, 430px);
-    height: 500px;
+    right: 50%;
+    bottom: -45px;
+    width: min(82%, 390px);
+    height: 450px;
+    transform: translateX(50%);
+  }
+  .hero__city-scene {
+    width: 100%;
+    height: 475px;
+    bottom: 175px;
+    clip-path: ellipse(95% 90% at 82% 120%);
+  }
+  .hero__service-grid {
+    width: min(calc(100% - 40px), 700px);
+    margin: -30px auto 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 560px) {
+  .hero__container {
+    width: min(calc(100% - 28px), 500px);
+    padding: 45px 0 45px;
+    gap: 30px;
+  }
+  .hero__title {
+    font-size: clamp(32px, 7.6vw, 44px);
+    letter-spacing: -.067em;
+  }
+  .hero__description {
+    margin-top: 23px;
+  }
+  .hero__actions {
+    margin-top: 27px;
+  }
+  .hero__socials {
+    margin-top: 32px;
+  }
   .hero__visual {
-    max-width: 100%;
-    min-height: 390px;
+    height: 340px;
+    min-height: 340px;
   }
-
-  .hero__city-scene {
-    right: -10px;
-    height: 220px;
-  }
-
   .hero__photo-frame {
-    width: min(88%, 340px);
-    height: 390px;
+    bottom: -22px;
+    width: min(85%, 315px);
+    height: 360px;
+  }
+  .hero__city-scene {
+    width: 100%;
+    height: 360px;
+    bottom: 332px;
+  }
+  .hero__service-grid {
+    width: min(calc(100% - 28px), 500px);
+    margin: -10px auto 25px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .hero__photo-frame {
     animation: none;
