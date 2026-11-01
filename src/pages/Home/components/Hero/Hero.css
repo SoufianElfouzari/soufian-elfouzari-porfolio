@@ -2007,3 +2007,14 @@
     right: 35px;
   }
 }
+
+/* Soft studio-style rim light around the actual transparent portrait */
+.hero__photo-frame {
+  filter:
+    drop-shadow(0 0 1px rgba(255,255,255,.62))
+    drop-shadow(-2px 0 3px rgba(208,228,255,.33))
+    drop-shadow(7px 12px 18px rgba(19,36,65,.20));
+}
+.hero__photo {
+  filter: none;
+}
