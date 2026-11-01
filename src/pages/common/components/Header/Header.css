@@ -688,3 +688,9 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
   background: linear-gradient(90deg, #c69439 0%, #e7bc69 32%, #fff3d0 51%, #e8bb61 70%, #c69439 100%);
   box-shadow: 0 0 3px rgba(236,185,83,.32), 0 0 6px rgba(236,185,83,.13);
 }
+
+/* Active navigation indicator: glossy black with a subtle white highlight */
+.site-header__navigation-link::after {
+  background: linear-gradient(90deg, #101216 0%, #33383d 28%, #a9adb0 49%, #30343a 70%, #101216 100%);
+  box-shadow: 0 0 3px rgba(20,23,27,.24), 0 1px 4px rgba(20,23,27,.14);
+}
