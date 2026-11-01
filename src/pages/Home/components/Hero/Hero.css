@@ -2018,3 +2018,13 @@
 .hero__photo {
   filter: none;
 }
+
+/* Subtle 3D turn toward the right, without changing portrait position */
+.hero__photo-frame {
+  perspective: 1100px;
+}
+.hero__photo {
+  transform: rotateY(9deg);
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
