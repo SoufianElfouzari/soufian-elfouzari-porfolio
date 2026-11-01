@@ -533,9 +533,9 @@ function Hero() {
         <div className="hero__location-widget"><span>⌖</span> Kassel, Deutschland</div>
         <div className="hero__clean-note">
           <span className="hero__clean-note-text">Clean<br/>Code</span>
-          <svg className="hero__clean-arrow" viewBox="0 0 55 65" fill="none" aria-hidden="true">
-            <path className="hero__clean-arrow-curve" d="M 4 5 C 31 12 47 30 43 55"/>
-            <path className="hero__clean-arrow-tip" d="M 36 47 L 43 55 L 49 46"/>
+          <svg className="hero__clean-arrow" viewBox="0 0 45 42" fill="none" aria-hidden="true">
+            <path className="hero__clean-arrow-curve" d="M 4 4 C 24 6 34 19 33 35"/>
+            <path className="hero__clean-arrow-tip" d="M 28 29 L 33 35 L 38 28"/>
           </svg>
         </div>
         <div className="hero__idea-note">
