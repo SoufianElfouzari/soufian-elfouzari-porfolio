@@ -532,8 +532,8 @@ function Hero() {
         <div className="hero__clean-note">Clean<br/>Code <span>↘</span></div>
         <div className="hero__idea-note">
           <svg className="hero__idea-arrow" viewBox="0 0 115 145" fill="none" aria-hidden="true">
-            <path className="hero__idea-arrow-line" d="M 51 4 C 39 27 34 48 35 69 C 35 83 21 87 17 79 C 12 69 29 60 48 63 C 76 67 88 52 93 69 C 100 87 79 105 68 117"/>
-            <path className="hero__idea-arrow-head" d="M 56 107 L 68 117 L 82 108"/>
+            <path className="hero__idea-arrow-line" d="M 48 3 C 35 30 28 51 31 68 C 34 83 13 91 12 76 C 11 60 31 61 47 65 C 66 70 88 57 97 72 C 108 91 86 111 72 124"/>
+            <path className="hero__idea-arrow-head" d="M 60 112 Q 65 120 72 124 Q 79 117 85 113"/>
           </svg>
           <span className="hero__idea-note-text">Ideen<br/>in Lösungen<br/>verwandeln.</span>
         </div>
