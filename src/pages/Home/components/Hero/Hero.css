@@ -1701,3 +1701,28 @@
 @media (max-width: 880px) {
   .hero > .hero__city-scene { width: 100%; height: 100%; top: 0; bottom: 0; }
 }
+
+/* Reference blue atmospheric gradient: soft, luminous, no hard edges */
+.hero {
+  background:
+    radial-gradient(ellipse 65% 58% at 91% 9%, rgba(180, 210, 250, .72) 0%, rgba(210, 229, 252, .48) 48%, transparent 100%),
+    radial-gradient(ellipse 66% 45% at 4% 99%, rgba(203, 224, 253, .72) 0%, rgba(231, 241, 255, .40) 55%, transparent 100%),
+    radial-gradient(ellipse 48% 37% at 61% 89%, rgba(209, 226, 251, .48) 0%, transparent 100%),
+    linear-gradient(112deg, #fff 0%, #fdfefe 35%, #f3f8ff 75%, #eaf3ff 100%);
+}
+.hero > .hero__city-scene::after {
+  background:
+    linear-gradient(90deg, #fff 0%, rgba(255,255,255,.90) 13%, rgba(255,255,255,.44) 34%, rgba(255,255,255,0) 64%),
+    linear-gradient(180deg, rgba(226,239,255,.20), transparent 38%);
+}
+.hero__service-grid {
+  filter: drop-shadow(0 7px 19px rgba(103, 145, 206, .055));
+}
+@media (max-width: 880px) {
+  .hero {
+    background:
+      radial-gradient(ellipse 90% 42% at 95% 6%, rgba(191,217,251,.65), transparent 100%),
+      radial-gradient(ellipse 90% 38% at 5% 96%, rgba(211,230,254,.67), transparent 100%),
+      linear-gradient(120deg, #fff, #f0f7ff);
+  }
+}
