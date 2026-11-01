@@ -474,7 +474,8 @@ function Hero() {
                 <stop offset="100%" stopColor="#fffaf0"/>
               </linearGradient>
             </defs>
-            <path className="hero__light-trail-glow" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-bloom" filter="url(#heroTrailBloom)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-glow" filter="url(#heroTrailHalo)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
             <path className="hero__light-trail-stroke" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
           </svg>
           <div className="hero__photo-frame">
@@ -487,7 +488,18 @@ function Hero() {
             />
           </div>
           <svg className="hero__light-trail hero__light-trail--front" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
-            <path className="hero__light-trail-glow" d="M 495 190 C 490 260 205 395 180 515"/>
+            <defs>
+              <filter id="heroTrailFrontBloom" x="-100%" y="-100%" width="300%" height="300%" colorInterpolationFilters="sRGB">
+                <feGaussianBlur stdDeviation="17"/>
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.78 0 0 0  0 0 0.33 0 0  0 0 0 2.6 0"/>
+              </filter>
+              <filter id="heroTrailFrontHalo" x="-100%" y="-100%" width="300%" height="300%" colorInterpolationFilters="sRGB">
+                <feGaussianBlur stdDeviation="5"/>
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.85 0 0 0  0 0 0.55 0 0  0 0 0 2 0"/>
+              </filter>
+            </defs>
+            <path className="hero__light-trail-bloom" filter="url(#heroTrailFrontBloom)" d="M 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-glow" filter="url(#heroTrailFrontHalo)" d="M 495 190 C 490 260 205 395 180 515"/>
             <path className="hero__light-trail-stroke" d="M 495 190 C 490 260 205 395 180 515"/>
           </svg>
         </div>
