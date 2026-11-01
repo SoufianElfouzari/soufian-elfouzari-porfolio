@@ -66,82 +66,6 @@ function EmailIcon() {
   );
 }
 
-function BackgroundAnimation() {
-  return (
-    <div className="hero__background" aria-hidden="true">
-      <div className="hero__glow hero__glow--one" />
-      <div className="hero__glow hero__glow--two" />
-
-      <svg
-        className="hero__background-lines"
-        viewBox="0 0 1600 900"
-        preserveAspectRatio="none"
-      >
-        <path
-          className="hero__background-path hero__background-path--one"
-          d="M-180 610 C150 390 365 735 690 548 C990 375 1205 390 1770 135"
-        />
-
-        <path
-          className="hero__background-path hero__background-path--two"
-          d="M-100 715 C245 510 420 830 780 640 C1090 475 1360 515 1730 310"
-        />
-
-        <path
-          className="hero__background-path hero__background-path--three"
-          d="M170 -70 C330 120 220 260 420 340 C640 430 710 205 940 285"
-        />
-      </svg>
-
-      <span className="hero__floating-circle hero__floating-circle--one" />
-      <span className="hero__floating-circle hero__floating-circle--two" />
-      <span className="hero__floating-circle hero__floating-circle--three" />
-    </div>
-  );
-}
-
-function GoldLines() {
-  return (
-    <svg
-      className="hero__gold-lines"
-      viewBox="0 0 560 360"
-      aria-hidden="true"
-    >
-      <path
-        className="hero__gold-line hero__gold-line--base"
-        d="M30 255 C155 218 270 165 355 112 C413 76 466 60 535 50"
-      />
-
-      <path
-        className="hero__gold-line hero__gold-line--shine"
-        d="M30 255 C155 218 270 165 355 112 C413 76 466 60 535 50"
-      />
-
-      <path
-        className="hero__gold-line hero__gold-line--base hero__gold-line--second"
-        d="M50 335 C175 298 295 253 390 215 C447 192 490 177 548 170"
-      />
-
-      <path
-        className="hero__gold-line hero__gold-line--shine hero__gold-line--second"
-        d="M50 335 C175 298 295 253 390 215 C447 192 490 177 548 170"
-      />
-    </svg>
-  );
-}
-
-function BrandMark() {
-  return (
-    <svg
-      className="hero__brand-mark"
-      viewBox="0 0 86 62"
-      aria-hidden="true"
-    >
-      <path d="M8 48 30 13 46 36 61 13 78 31" />
-    </svg>
-  );
-}
-
 function AnimatedBook() {
   return (
     <span className="hero__book" aria-hidden="true">
@@ -526,7 +450,6 @@ function Hero() {
       className="hero"
       aria-labelledby="hero-title"
     >
-      <BackgroundAnimation />
 
       <div className="hero__container">
         <div className="hero__content">
@@ -599,8 +522,6 @@ function Hero() {
         </div>
 
         <div className="hero__visual">
-          <BrandMark />
-          <GoldLines />
 
           <div className="hero__photo-frame">
             <div className="hero__photo-line" aria-hidden="true" />
