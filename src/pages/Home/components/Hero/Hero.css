@@ -2109,3 +2109,31 @@
   from { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ffe9aa); }
   to { filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 7px #ffe5a2) drop-shadow(0 0 12px #ffc45a); }
 }
+
+/* Brilliant jewel-like shine: crisp hairline core, layered warm halo */
+.hero__light-trail-glow {
+  stroke: #ffe8a3;
+  stroke-width: 8;
+  opacity: .92;
+  filter: blur(7px) drop-shadow(0 0 13px #ffd16a);
+}
+.hero__light-trail-stroke {
+  stroke-width: 1.35;
+  filter:
+    drop-shadow(0 0 2px #ffffff)
+    drop-shadow(0 0 5px #fff9d9)
+    drop-shadow(0 0 12px #ffd36b)
+    drop-shadow(0 0 22px #ffbd42);
+}
+@keyframes heroTrailGlow {
+  from { opacity: .62; filter: blur(6px) drop-shadow(0 0 10px #ffd16a); }
+  to { opacity: 1; filter: blur(9px) drop-shadow(0 0 23px #ffc34b); }
+}
+@keyframes heroTrailShimmer {
+  from {
+    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 6px #fff6d5) drop-shadow(0 0 12px #ffd36b);
+  }
+  to {
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 12px #fff7ce) drop-shadow(0 0 25px #ffd36b) drop-shadow(0 0 36px #ffb63f);
+  }
+}
