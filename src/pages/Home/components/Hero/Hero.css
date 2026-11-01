@@ -2094,3 +2094,18 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__light-trail path { animation: none; stroke-dashoffset: 0; }
 }
+
+/* Refined hairline light ribbon with sharp, luminous highlights */
+.hero__light-trail-glow {
+  stroke-width: 4;
+  opacity: .5;
+  filter: blur(5px);
+}
+.hero__light-trail-stroke {
+  stroke-width: 1.15;
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 4px #ffe9aa) drop-shadow(0 0 8px #ffcd64);
+}
+@keyframes heroTrailShimmer {
+  from { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ffe9aa); }
+  to { filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 7px #ffe5a2) drop-shadow(0 0 12px #ffc45a); }
+}
