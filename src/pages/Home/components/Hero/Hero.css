@@ -1915,3 +1915,24 @@
 .hero__location-widget,
 .hero__clean-note,
 .hero__idea-note { z-index: 1; }
+
+/* Fix cropped head and premature fade: keep full portrait inside hero */
+@media (min-width: 1101px) {
+  .hero__photo-frame {
+    width: min(125%, 610px);
+    height: clamp(540px, 36vw, 625px);
+    bottom: -120px;
+    right: clamp(-75px, -2.5vw, -25px);
+  }
+}
+@media (min-width: 881px) and (max-width: 1100px) {
+  .hero__photo-frame {
+    width: min(118%, 500px);
+    height: 540px;
+    bottom: -110px;
+  }
+}
+.hero__photo {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 94%, transparent 100%);
+}
