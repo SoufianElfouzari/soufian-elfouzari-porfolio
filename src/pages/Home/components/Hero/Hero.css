@@ -1494,3 +1494,65 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__social-links a::after { transition: none; }
 }
+
+/* Four service cards along the bottom of the hero */
+.hero { flex-direction: column; justify-content: center; }
+.hero__service-grid {
+  position: relative;
+  z-index: 5;
+  width: min(calc(100% - 64px), 1380px);
+  margin: -20px auto 35px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.hero__service-card {
+  min-width: 0;
+  min-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px 17px;
+  border: 1px solid rgba(229,234,244,.85);
+  border-radius: 12px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 8px 26px rgba(47,85,143,.055), 0 1px 3px rgba(47,85,143,.025);
+  color: #171c2a;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.hero__service-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbdcfb;
+  box-shadow: 0 15px 30px rgba(47,85,143,.11);
+}
+.hero__service-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #eff5ff;
+  color: #4288ff;
+}
+.hero__service-icon svg { width: 23px; height: 23px; }
+.hero__service-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.hero__service-copy strong { font-size: 13px; font-weight: 700; line-height: 1.25; }
+.hero__service-copy > span { color: #7b8498; font-size: 11px; line-height: 1.55; }
+.hero__service-arrow { width: 17px; height: 17px; flex: 0 0 17px; color: #71809d; margin-top: 2px; transition: transform .2s ease; }
+.hero__service-card:hover .hero__service-arrow { transform: translateX(4px); }
+@media (max-width: 1100px) {
+  .hero__service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 0; }
+}
+@media (max-width: 880px) {
+  .hero__service-grid { width: min(calc(100% - 40px),700px); }
+}
+@media (max-width: 560px) {
+  .hero__service-grid { width: min(calc(100% - 28px),500px); grid-template-columns: 1fr; gap: 10px; margin-bottom: 24px; }
+  .hero__service-card { min-height: 82px; padding: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__service-card, .hero__service-arrow { transition: none; }
+}
