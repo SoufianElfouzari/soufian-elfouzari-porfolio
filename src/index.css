@@ -113,3 +113,18 @@ p {
     animation-iteration-count: 1 !important;
   }
 }
+/* Theme variables used by the portfolio and header switch */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background:#10151e;
+  --color-surface:#1b2430;
+  --color-text:#edf0f5;
+  --color-text-muted:#a9b4c3;
+  --color-border:rgba(230,238,250,.17);
+  --color-accent:#c4a15e;
+  --color-accent-dark:#e0c181;
+  --color-accent-soft:#252d38;
+  background:#10151e;
+  color:#edf0f5;
+}
+html[data-theme="dark"] body {background:var(--color-background);color:var(--color-text);}
