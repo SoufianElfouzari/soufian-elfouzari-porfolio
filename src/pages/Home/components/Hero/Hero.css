@@ -2271,3 +2271,31 @@
     left: 24%;
   }
 }
+
+/* Keep the ideas annotation in the heading's layout flow: no text overlap */
+.hero__content > .hero__idea-note {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  width: max-content;
+  max-width: 100%;
+  margin: 8px 0 24px 14%;
+  pointer-events: none;
+}
+.hero__content > .hero__idea-note > .hero__idea-arrow {
+  width: 94px;
+  height: 108px;
+  margin-left: 10px;
+}
+.hero__content > .hero__idea-note > .hero__idea-note-text {
+  margin-top: -9px;
+}
+@media (max-width: 1000px) {
+  .hero__content > .hero__idea-note { display: flex; margin-left: 10%; }
+}
+@media (max-width: 560px) {
+  .hero__content > .hero__idea-note { margin-left: 6%; }
+}
