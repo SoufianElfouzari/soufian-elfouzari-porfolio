@@ -1302,3 +1302,13 @@
 @media (max-width: 560px) {
   .hero__title { font-size: clamp(30px, 7.2vw, 42px); }
 }
+
+/* Override the generic .hero__title span gold rule explicitly */
+.hero__title .hero__title-main {
+  color: #080b12;
+  -webkit-text-fill-color: #080b12;
+}
+.hero__title .hero__title-location {
+  color: #c49b55;
+  -webkit-text-fill-color: #c49b55;
+}
