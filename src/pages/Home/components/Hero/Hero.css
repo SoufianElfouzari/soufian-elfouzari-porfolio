@@ -2370,3 +2370,12 @@
 .hero__floating-ui > .hero__clean-note .hero__clean-arrow path {
   stroke-width: 1.35;
 }
+
+/* Slightly enlarge the Clean Code annotation while keeping its natural proportions */
+.hero__floating-ui > .hero__clean-note {
+  font-size: 17px;
+}
+.hero__floating-ui > .hero__clean-note > .hero__clean-arrow {
+  width: 53px;
+  height: 50px;
+}
