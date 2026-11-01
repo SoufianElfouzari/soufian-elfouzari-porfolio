@@ -694,3 +694,25 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
   background: linear-gradient(90deg, #101216 0%, #33383d 28%, #a9adb0 49%, #30343a 70%, #101216 100%);
   box-shadow: 0 0 3px rgba(20,23,27,.24), 0 1px 4px rgba(20,23,27,.14);
 }
+
+/* Gold underline retained; active navigation TEXT is glossy black */
+.site-header__navigation-link::after {
+  background: linear-gradient(90deg, #c69439 0%, #e7bc69 32%, #fff3d0 51%, #e8bb61 70%, #c69439 100%);
+  box-shadow: 0 0 3px rgba(236,185,83,.32), 0 0 6px rgba(236,185,83,.13);
+}
+.site-header__navigation-link--active {
+  color: #08090b;
+  font-weight: 750;
+  background: linear-gradient(110deg, #050608 5%, #30343a 34%, #777b80 48%, #111317 62%, #050608 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(255,255,255,.65));
+}
+html[data-theme="dark"] .site-header__navigation-link--active {
+  background: linear-gradient(110deg,#f5f6f8,#b6bcc7 43%,#fff 55%,#d6dbe3);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:none;
+}
