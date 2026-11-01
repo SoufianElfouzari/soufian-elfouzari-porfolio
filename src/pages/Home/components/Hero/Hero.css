@@ -2018,3 +2018,9 @@
 .hero__photo {
   filter: none;
 }
+
+/* Slight clockwise 2D rotation of the portrait, without changing its position */
+.hero__photo {
+  transform: rotate(5deg);
+  transform-origin: center center;
+}
