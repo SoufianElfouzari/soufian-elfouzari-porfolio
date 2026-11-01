@@ -474,8 +474,8 @@ function Hero() {
                 <stop offset="100%" stopColor="#fffaf0"/>
               </linearGradient>
             </defs>
-            <path className="hero__light-trail-glow" d="M 35 240 C 145 112 448 65 520 150 C 592 255 235 350 175 535"/>
-            <path className="hero__light-trail-stroke" d="M 35 240 C 145 112 448 65 520 150 C 592 255 235 350 175 535"/>
+            <path className="hero__light-trail-glow" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-stroke" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
           </svg>
           <div className="hero__photo-frame">
             <img
@@ -487,8 +487,8 @@ function Hero() {
             />
           </div>
           <svg className="hero__light-trail hero__light-trail--front" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
-            <path className="hero__light-trail-glow" d="M 520 150 C 592 255 235 350 175 535"/>
-            <path className="hero__light-trail-stroke" d="M 520 150 C 592 255 235 350 175 535"/>
+            <path className="hero__light-trail-glow" d="M 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-stroke" d="M 495 190 C 490 260 205 395 180 515"/>
           </svg>
         </div>
       </div>
