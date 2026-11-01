@@ -645,3 +645,8 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
 .site-header__inner { width: calc(100% - 64px); max-width: 1600px; }
 @media (max-width: 1080px) { .site-header__inner { width: calc(100% - 44px); } }
 @media (max-width: 520px) { .site-header__inner { width: calc(100% - 28px); } }
+
+/* Align header horizontal container exactly with the Hero container */
+.site-header__inner { width: min(calc(100% - 64px), 1380px); max-width: none; }
+@media (max-width: 880px) { .site-header__inner { width: min(calc(100% - 40px), 700px); } }
+@media (max-width: 560px) { .site-header__inner { width: min(calc(100% - 28px), 500px); } }
