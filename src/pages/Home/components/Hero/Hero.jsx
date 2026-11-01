@@ -532,8 +532,8 @@ function Hero() {
           <DraggableIntro heroRef={heroRef} />
 
           <h1 id="hero-title" className="hero__title">
-            Fullstack Developer
-            <span>aus Kassel.</span>
+            <span className="hero__title-main">Fullstack Developer</span>
+            <span className="hero__title-location">aus Kassel.</span>
           </h1>
 
           <p className="hero__description">
