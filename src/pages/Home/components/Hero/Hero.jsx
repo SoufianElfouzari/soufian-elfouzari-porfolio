@@ -404,6 +404,14 @@ function Hero() {
             <span className="hero__title-location">aus Kassel.</span>
           </h1>
 
+        <div className="hero__idea-note">
+          <svg className="hero__idea-arrow" viewBox="0 0 115 145" fill="none" aria-hidden="true">
+            <path className="hero__idea-arrow-line" d="M 48 3 C 35 30 28 51 31 68 C 34 83 13 91 12 76 C 11 60 31 61 47 65 C 66 70 88 57 97 72 C 108 91 86 111 72 124"/>
+            <path className="hero__idea-arrow-head" d="M 74 112 Q 73 118 72 124 M 72 124 Q 79 122 85 122"/>
+          </svg>
+          <span className="hero__idea-note-text">Ideen<br/>in Lösungen<br/>verwandeln.</span>
+        </div>
+
           <p className="hero__description">
             Ich entwickle moderne Websites, Software und Apps, die nicht
             nur gut aussehen, sondern zuverlässig funktionieren und echten
@@ -536,13 +544,7 @@ function Hero() {
             <path className="hero__clean-arrow-tip" d="M 36 47 L 43 55 L 49 46"/>
           </svg>
         </div>
-        <div className="hero__idea-note">
-          <svg className="hero__idea-arrow" viewBox="0 0 115 145" fill="none" aria-hidden="true">
-            <path className="hero__idea-arrow-line" d="M 48 3 C 35 30 28 51 31 68 C 34 83 13 91 12 76 C 11 60 31 61 47 65 C 66 70 88 57 97 72 C 108 91 86 111 72 124"/>
-            <path className="hero__idea-arrow-head" d="M 74 112 Q 73 118 72 124 M 72 124 Q 79 122 85 122"/>
-          </svg>
-          <span className="hero__idea-note-text">Ideen<br/>in Lösungen<br/>verwandeln.</span>
-        </div>
+
       </div>
       <svg className="hero__bottom-wave" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 115 C205 185 365 153 550 116 S825 23 1030 73 S1295 165 1440 75 V190 H0Z" fill="#d9e9ff" opacity=".72"/>
