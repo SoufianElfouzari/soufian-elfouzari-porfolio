@@ -2069,13 +2069,13 @@
 }
 .hero__light-trail-aura {
   stroke: #ffcf67;
-  stroke-width: 19;
-  opacity: .95;
+  stroke-width: 3;
+  opacity: .38;
 }
 .hero__light-trail-core {
   stroke: #fffef5;
-  stroke-width: 1.1;
-  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #ffe4a0);
+  stroke-width: .85;
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #ffe4a0);
 }
 .hero__light-trail--front path { animation-delay: .65s; }
 @keyframes heroTrailDraw { to { stroke-dashoffset: 0; } }
