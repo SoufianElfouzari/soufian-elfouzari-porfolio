@@ -1869,3 +1869,36 @@
 @media(prefers-reduced-motion:reduce){
   .hero__code-widget,.hero__idea-widget,.hero__stats-widget {animation:none;}
 }
+
+/* Make the foreground portrait substantially larger than before */
+@media (min-width: 1101px) {
+  .hero__visual { overflow: visible; }
+  .hero__photo-frame {
+    width: min(130%, 650px);
+    height: clamp(600px, 43vw, 750px);
+    right: clamp(-90px, -3vw, -35px);
+    bottom: -125px;
+  }
+}
+@media (min-width: 881px) and (max-width: 1100px) {
+  .hero__photo-frame {
+    width: min(125%, 530px);
+    height: 610px;
+    right: -45px;
+    bottom: -115px;
+  }
+}
+@media (max-width: 880px) and (min-width: 561px) {
+  .hero__photo-frame {
+    width: min(100%, 510px);
+    height: 580px;
+    bottom: -70px;
+  }
+}
+@media (max-width: 560px) {
+  .hero__photo-frame {
+    width: min(100%, 400px);
+    height: 460px;
+    bottom: -40px;
+  }
+}
