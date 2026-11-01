@@ -615,6 +615,28 @@ function Hero() {
           <ProjectCircle />
         </div>
       </div>
+      <div className="hero__service-grid" aria-label="Meine Leistungen">
+        {[
+          { title: "Websites & Web-Apps", description: "Moderne, schnelle und skalierbare Weblösungen.", icon: "web" },
+          { title: "Mobile & Desktop Apps", description: "Plattformübergreifende Anwendungen mit Flutter.", icon: "mobile" },
+          { title: "Backend & APIs", description: "Zuverlässige und performante Serverlösungen.", icon: "server" },
+          { title: "Automatisierungen", description: "Effiziente Prozesse und individuelle Tools.", icon: "bolt" },
+        ].map((service) => (
+          <a className="hero__service-card" href="/leistungen" key={service.title}>
+            <span className="hero__service-icon" aria-hidden="true">
+              {service.icon === "web" && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>}
+              {service.icon === "mobile" && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>}
+              {service.icon === "server" && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg>}
+              {service.icon === "bolt" && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg>}
+            </span>
+            <span className="hero__service-copy">
+              <strong>{service.title}</strong>
+              <span>{service.description}</span>
+            </span>
+            <svg className="hero__service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }
