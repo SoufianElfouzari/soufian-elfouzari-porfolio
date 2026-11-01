@@ -2041,3 +2041,8 @@
 .hero__photo {
   scale: 1.12;
 }
+
+/* Further enlarge the portrait while keeping its 2D angle and lower crop */
+.hero__photo {
+  scale: 1.19;
+}
