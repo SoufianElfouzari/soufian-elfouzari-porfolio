@@ -41,11 +41,25 @@ function ArrowIcon() {
   );
 }
 
+function SunIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>;
+}
+
+function MoonIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.2 15.7A8.5 8.5 0 0 1 8.3 3.8 8.5 8.5 0 1 0 20.2 15.7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg>;
+}
+
 function Header() {
   const location = useLocation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(() => typeof window !== "undefined" && window.localStorage.getItem("portfolio-theme") === "dark");
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    window.localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+  }, [isDark]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -173,6 +187,10 @@ function Header() {
             Kontakt
             <ArrowIcon />
           </Link>
+
+          <button className="site-header__theme-button" type="button" onClick={() => setIsDark((value) => !value)} aria-label={isDark ? "Helles Design aktivieren" : "Dunkles Design aktivieren"} title={isDark ? "Helles Design" : "Dunkles Design"}>
+            {isDark ? <MoonIcon /> : <SunIcon />}
+          </button>
 
           <button
             className="site-header__menu-button"
