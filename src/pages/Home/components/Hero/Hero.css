@@ -2144,3 +2144,22 @@
 .hero__idea-arrow-head {
   stroke-width: 1.6;
 }
+
+/* Match the reference: legible blue handwritten note and a slightly bolder gold arrow */
+.hero__idea-note {
+  color: #315a9a;
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.12;
+  transform: rotate(-12deg);
+}
+.hero__idea-note-text {
+  color: #315a9a;
+  font: inherit;
+  letter-spacing: .035em;
+  margin-top: -5px;
+}
+.hero__idea-arrow-line { stroke-width: 2.35; }
+.hero__idea-arrow-head { stroke-width: 2.1; }
