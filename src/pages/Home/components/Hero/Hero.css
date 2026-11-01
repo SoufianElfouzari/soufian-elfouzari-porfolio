@@ -2046,3 +2046,51 @@
 .hero__photo {
   scale: 1.19;
 }
+
+/* Animated golden light ribbon: begins behind the portrait, sweeps across its front */
+.hero__visual { isolation: isolate; }
+.hero__light-trail {
+  position: absolute;
+  inset: -12px -40px -20px -30px;
+  width: calc(100% + 70px);
+  height: calc(100% + 32px);
+  overflow: visible;
+  pointer-events: none;
+}
+.hero__light-trail--behind { z-index: 4; }
+.hero__light-trail--front { z-index: 8; }
+.hero__light-trail path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero__light-trail-glow {
+  stroke: #ffda85;
+  stroke-width: 10;
+  opacity: .65;
+  filter: blur(8px);
+  stroke-dasharray: 1250;
+  stroke-dashoffset: 1250;
+  animation: heroTrailDraw 3.2s ease-in-out forwards, heroTrailGlow 3s ease-in-out 3.2s infinite alternate;
+}
+.hero__light-trail-stroke {
+  stroke: url(#heroTrailGold);
+  stroke-width: 2.1;
+  filter: drop-shadow(0 0 3px #fff2bc) drop-shadow(0 0 8px #ffbd50);
+  stroke-dasharray: 1250;
+  stroke-dashoffset: 1250;
+  animation: heroTrailDraw 3.2s ease-in-out forwards, heroTrailShimmer 3.5s ease-in-out 3.2s infinite alternate;
+}
+.hero__light-trail--front path { animation-delay: .8s, 4s; }
+@keyframes heroTrailDraw { to { stroke-dashoffset: 0; } }
+@keyframes heroTrailGlow { from { opacity: .28; } to { opacity: .82; } }
+@keyframes heroTrailShimmer {
+  from { filter: drop-shadow(0 0 2px #fff2bc) drop-shadow(0 0 5px #ffbd50); }
+  to { filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 16px #ffc45a); }
+}
+@media (max-width: 880px) {
+  .hero__light-trail { inset: 0; width: 100%; height: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__light-trail path { animation: none; stroke-dashoffset: 0; }
+}
