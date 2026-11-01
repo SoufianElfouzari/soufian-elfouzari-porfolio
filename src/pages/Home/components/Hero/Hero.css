@@ -1246,3 +1246,33 @@
     animation: none;
   }
 }
+/* Hero headline: two compact lines as in the reference */
+.hero__title {
+  max-width: none;
+  font-size: clamp(43px, 4.2vw, 72px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.072em;
+}
+.hero__title-main {
+  display: block;
+  color: #080b11;
+  white-space: nowrap;
+}
+.hero__title-location {
+  display: block;
+  color: #b99650;
+  white-space: nowrap;
+}
+@media (max-width: 1100px) and (min-width: 881px) {
+  .hero__title { font-size: clamp(39px, 4.4vw, 52px); }
+}
+@media (max-width: 880px) {
+  .hero__title { font-size: clamp(38px, 7.6vw, 64px); }
+}
+@media (max-width: 560px) {
+  .hero__title { font-size: clamp(30px, 7.3vw, 43px); letter-spacing: -0.065em; }
+}
+@media (max-width: 370px) {
+  .hero__title { font-size: 29px; }
+}
