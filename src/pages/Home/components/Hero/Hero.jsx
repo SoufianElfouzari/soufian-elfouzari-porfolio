@@ -477,8 +477,8 @@ function Hero() {
                 </feMerge>
               </filter>
             </defs>
-            <path className="hero__light-trail-aura" filter="url(#heroGlow-behind)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
-            <path className="hero__light-trail-core" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-aura" filter="url(#heroGlow-behind)" d="M 115 255 C 235 105 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-core" d="M 115 255 C 235 105 500 125 495 190 C 490 260 205 395 180 515"/>
           </svg>
           <div className="hero__photo-frame">
             <img
