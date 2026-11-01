@@ -571,7 +571,7 @@ function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub-Profil von Soufian El-Fouzari"
-                title="GitHub"
+                data-tooltip="GitHub"
               >
                 <GitHubIcon />
               </a>
@@ -581,7 +581,7 @@ function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Xing-Profil von Soufian El-Fouzari"
-                title="Xing"
+                data-tooltip="Xing"
                 className="hero__social-link--gold"
               >
                 <XingIcon />
@@ -590,7 +590,7 @@ function Hero() {
               <a
                 href="mailto:kontakt@elfouzari.de"
                 aria-label="E-Mail an Soufian El-Fouzari schreiben"
-                title="E-Mail schreiben"
+                data-tooltip="E-Mail"
               >
                 <EmailIcon />
               </a>
