@@ -650,3 +650,18 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
 .site-header__inner { width: min(calc(100% - 64px), 1380px); max-width: none; }
 @media (max-width: 880px) { .site-header__inner { width: min(calc(100% - 40px), 700px); } }
 @media (max-width: 560px) { .site-header__inner { width: min(calc(100% - 28px), 500px); } }
+
+/* Reference-style active indicator: short, fine line close to label */
+.site-header__navigation-link::after {
+  left: 0;
+  right: auto;
+  bottom: 7px;
+  width: 22px;
+  height: 1px;
+  transform: none;
+  transform-origin: left center;
+}
+.site-header__navigation-link:hover::after,
+.site-header__navigation-link--active::after {
+  transform: none;
+}
