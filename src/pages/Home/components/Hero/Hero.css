@@ -1843,7 +1843,7 @@
 .hero__clean-note {top:6%;left:54%;}
 .hero__clean-note span {display:block;font-size:34px;margin-left:40px;}
 .hero__idea-note {top:45%;left:41%;color:#5276ba;transform:rotate(-13deg);}
-.hero__idea-note span {display:block;color:#bd9650;font-size:31px;margin-left:32px;}
+/* Legacy generic span rule removed: note text has its own dedicated styling. */
 .hero__bottom-wave {position:absolute;z-index:4;bottom:75px;left:0;width:100%;height:150px;pointer-events:none;filter:drop-shadow(0 -8px 18px rgba(130,172,227,.13));}
 .hero__service-grid {z-index:6;margin-top:-70px;}
 @keyframes heroFloat {0%,100%{translate:0 0;}50%{translate:0 -9px;}}
@@ -2163,3 +2163,17 @@
 }
 .hero__idea-arrow-line { stroke-width: 2.35; }
 .hero__idea-arrow-head { stroke-width: 2.1; }
+
+/* Keep the handwritten note compact and blue, exactly as the reference */
+.hero__idea-note > .hero__idea-note-text {
+  display: block;
+  color: #315a9a;
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 17px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.12;
+  letter-spacing: .025em;
+  margin: -5px 0 0 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
