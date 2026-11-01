@@ -2299,3 +2299,38 @@
 @media (max-width: 560px) {
   .hero__content > .hero__idea-note { margin-left: 6%; }
 }
+
+/* Restore reference composition: small annotation floating beside the portrait,
+   never between the headline and its description. */
+.hero__floating-ui > .hero__idea-note {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  width: 130px;
+  max-width: none;
+  margin: 0;
+  transform: rotate(-13deg);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__floating-ui > .hero__idea-note > .hero__idea-arrow {
+  order: 0;
+  width: 88px;
+  height: 110px;
+  margin: 0 0 0 9px;
+  transform: rotate(12deg);
+}
+.hero__floating-ui > .hero__idea-note > .hero__idea-note-text {
+  order: 1;
+  margin: -12px 0 0;
+  font-size: 16px;
+  line-height: 1.1;
+}
+@media (min-width: 1101px) {
+  .hero__floating-ui > .hero__idea-note { top: 43%; left: 41%; }
+}
+@media (max-width: 1000px) {
+  .hero__floating-ui > .hero__idea-note { display: none; }
+}
