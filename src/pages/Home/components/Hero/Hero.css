@@ -2047,7 +2047,7 @@
   scale: 1.19;
 }
 
-/* Animated golden light ribbon: begins behind the portrait, sweeps across its front */
+/* Thin luminous ribbon: a sharp white core with a soft gold halo */
 .hero__visual { isolation: isolate; }
 .hero__light-trail {
   position: absolute;
@@ -2059,81 +2059,37 @@
 }
 .hero__light-trail--behind { z-index: 4; }
 .hero__light-trail--front { z-index: 8; }
-.hero__light-trail path {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+.hero__light-trail path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .hero__light-trail-glow {
-  stroke: #ffda85;
-  stroke-width: 10;
-  opacity: .65;
-  filter: blur(8px);
+  stroke: #ffdc91;
+  stroke-width: 3;
+  opacity: .7;
+  filter: blur(4px) drop-shadow(0 0 7px #ffd477);
   stroke-dasharray: 1250;
   stroke-dashoffset: 1250;
-  animation: heroTrailDraw 3.2s ease-in-out forwards, heroTrailGlow 3s ease-in-out 3.2s infinite alternate;
+  animation: heroTrailDraw 2.8s ease-out forwards, heroTrailGlow 2.6s ease-in-out 2.8s infinite alternate;
 }
 .hero__light-trail-stroke {
-  stroke: url(#heroTrailGold);
-  stroke-width: 2.1;
-  filter: drop-shadow(0 0 3px #fff2bc) drop-shadow(0 0 8px #ffbd50);
+  stroke: #fffdf4;
+  stroke-width: 0.85;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #ffdf8b);
   stroke-dasharray: 1250;
   stroke-dashoffset: 1250;
-  animation: heroTrailDraw 3.2s ease-in-out forwards, heroTrailShimmer 3.5s ease-in-out 3.2s infinite alternate;
+  animation: heroTrailDraw 2.8s ease-out forwards, heroTrailShimmer 2.6s ease-in-out 2.8s infinite alternate;
 }
-.hero__light-trail--front path { animation-delay: .8s, 4s; }
+.hero__light-trail--front path { animation-delay: .65s, 3.45s; }
 @keyframes heroTrailDraw { to { stroke-dashoffset: 0; } }
-@keyframes heroTrailGlow { from { opacity: .28; } to { opacity: .82; } }
+@keyframes heroTrailGlow {
+  from { opacity: .42; filter: blur(3px) drop-shadow(0 0 4px #ffd477); }
+  to { opacity: .8; filter: blur(5px) drop-shadow(0 0 10px #ffcd63); }
+}
 @keyframes heroTrailShimmer {
-  from { filter: drop-shadow(0 0 2px #fff2bc) drop-shadow(0 0 5px #ffbd50); }
-  to { filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 16px #ffc45a); }
+  from { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ffe1a0); }
+  to { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px #ffd477); }
 }
 @media (max-width: 880px) {
   .hero__light-trail { inset: 0; width: 100%; height: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero__light-trail path { animation: none; stroke-dashoffset: 0; }
-}
-
-/* Refined hairline light ribbon with sharp, luminous highlights */
-.hero__light-trail-glow {
-  stroke-width: 4;
-  opacity: .5;
-  filter: blur(5px);
-}
-.hero__light-trail-stroke {
-  stroke-width: 1.15;
-  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 4px #ffe9aa) drop-shadow(0 0 8px #ffcd64);
-}
-@keyframes heroTrailShimmer {
-  from { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ffe9aa); }
-  to { filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 7px #ffe5a2) drop-shadow(0 0 12px #ffc45a); }
-}
-
-/* Brilliant jewel-like shine: crisp hairline core, layered warm halo */
-.hero__light-trail-glow {
-  stroke: #ffe8a3;
-  stroke-width: 8;
-  opacity: .92;
-  filter: blur(7px) drop-shadow(0 0 13px #ffd16a);
-}
-.hero__light-trail-stroke {
-  stroke-width: 1.35;
-  filter:
-    drop-shadow(0 0 2px #ffffff)
-    drop-shadow(0 0 5px #fff9d9)
-    drop-shadow(0 0 12px #ffd36b)
-    drop-shadow(0 0 22px #ffbd42);
-}
-@keyframes heroTrailGlow {
-  from { opacity: .62; filter: blur(6px) drop-shadow(0 0 10px #ffd16a); }
-  to { opacity: 1; filter: blur(9px) drop-shadow(0 0 23px #ffc34b); }
-}
-@keyframes heroTrailShimmer {
-  from {
-    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 6px #fff6d5) drop-shadow(0 0 12px #ffd36b);
-  }
-  to {
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 12px #fff7ce) drop-shadow(0 0 25px #ffd36b) drop-shadow(0 0 36px #ffb63f);
-  }
 }
