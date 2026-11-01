@@ -2004,7 +2004,7 @@
 /* Portrait: shift slightly left on desktop */
 @media (min-width: 1101px) {
   .hero__photo-frame {
-    right: 35px;
+    right: 135px;
   }
 }
 
