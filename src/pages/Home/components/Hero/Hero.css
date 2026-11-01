@@ -2177,3 +2177,9 @@
   margin: -5px 0 0 0;
   text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
+
+/* Bring handwritten note closer to the arrow and enlarge it slightly */
+.hero__idea-note > .hero__idea-note-text {
+  font-size: 19px;
+  margin-top: -25px;
+}
