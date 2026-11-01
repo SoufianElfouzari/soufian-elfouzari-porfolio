@@ -2334,3 +2334,10 @@
 @media (max-width: 1000px) {
   .hero__floating-ui > .hero__idea-note { display: none; }
 }
+
+/* Reduce empty space between hero headline and floating ideas arrow */
+@media (min-width: 1101px) {
+  .hero__floating-ui > .hero__idea-note {
+    top: 35%;
+  }
+}
