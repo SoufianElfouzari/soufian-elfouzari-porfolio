@@ -477,6 +477,37 @@ function Hero() {
           </div>
         </div>
       </div>
+
+      <div className="hero__floating-ui" aria-hidden="true">
+        <div className="hero__code-widget">
+          <div className="hero__code-dots"><i/><i/><i/></div>
+          <div className="hero__code-body">
+            <span className="hero__code-number">1</span><span><b>const</b> developer = {'{'}</span>
+            <span className="hero__code-number">2</span><span>  name: <em>"Soufian"</em>,</span>
+            <span className="hero__code-number">3</span><span>  location: <em>"Kassel"</em>,</span>
+            <span className="hero__code-number">4</span><span>  stack: [<em>"React"</em>, <em>"Python"</em>],</span>
+            <span className="hero__code-number">5</span><span>  goal: <em>"Impact"</em></span>
+            <span className="hero__code-number">6</span><span>{'}'}</span>
+          </div>
+        </div>
+        <div className="hero__idea-widget">
+          <span className="hero__idea-icon">✧</span>
+          <span>Idee<br/>Planung<br/>Entwicklung<br/>Deployment</span>
+          <span className="hero__idea-code">&lt;/&gt;</span>
+        </div>
+        <div className="hero__stats-widget">
+          <span>Projekte</span>
+          <strong>30+</strong>
+          <svg viewBox="0 0 105 45" fill="none"><path d="M2 38 C16 37 15 20 28 25 S46 37 55 16 S73 23 83 10 S94 14 103 2" stroke="#6199ff" strokeWidth="2.5" strokeLinecap="round"/><path d="M2 38 C16 37 15 20 28 25 S46 37 55 16 S73 23 83 10 S94 14 103 2 V45 H2Z" fill="#87b4ff" opacity=".12"/></svg>
+        </div>
+        <div className="hero__location-widget"><span>⌖</span> Kassel, Deutschland</div>
+        <div className="hero__clean-note">Clean<br/>Code <span>↘</span></div>
+        <div className="hero__idea-note">Ideen<br/>in Lösungen<br/>verwandeln. <span>↗</span></div>
+      </div>
+      <svg className="hero__bottom-wave" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 115 C205 185 365 153 550 116 S825 23 1030 73 S1295 165 1440 75 V190 H0Z" fill="#d9e9ff" opacity=".72"/>
+        <path d="M0 142 C260 210 390 145 585 126 S845 65 1035 100 S1270 178 1440 106 V190 H0Z" fill="#f4f8ff" opacity=".93"/>
+      </svg>
       <div className="hero__service-grid" aria-label="Meine Leistungen">
         {[
           { title: "Websites & Web-Apps", description: "Moderne, schnelle und skalierbare Weblösungen.", icon: "web" },
