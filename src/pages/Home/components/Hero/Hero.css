@@ -1312,3 +1312,18 @@
   color: #c49b55;
   -webkit-text-fill-color: #c49b55;
 }
+
+/* Larger hero headline, preserving two-line layout and distinct colors */
+@media (min-width: 1101px) {
+  .hero__title { font-size: clamp(66px, 5.2vw, 88px); }
+  .hero__content { max-width: none; }
+}
+@media (min-width: 881px) and (max-width: 1100px) {
+  .hero__title { font-size: clamp(53px, 5.2vw, 67px); }
+}
+@media (min-width: 561px) and (max-width: 880px) {
+  .hero__title { font-size: clamp(52px, 8vw, 72px); }
+}
+@media (max-width: 560px) {
+  .hero__title { font-size: clamp(34px, 7.5vw, 47px); }
+}
