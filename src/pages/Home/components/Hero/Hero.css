@@ -2384,11 +2384,11 @@
 @media (min-width: 1251px) {
   .hero__floating-ui > .hero__code-widget {
     top: 11%;
-    left: 43%;
+    left: 47%;
     width: 310px;
     min-height: 0;
     padding: 13px 17px 17px;
-    transform: perspective(900px) rotateY(-13deg) rotateX(5deg) rotateZ(5deg);
+    transform: perspective(900px) rotateY(-23deg) rotateX(9deg) rotateZ(5deg);
     transform-origin: 50% 50%;
     border-radius: 13px;
     box-shadow: 0 28px 48px rgba(20,42,75,.30), 0 8px 20px rgba(20,42,75,.13), inset 0 1px rgba(255,255,255,.16);
@@ -2404,8 +2404,8 @@
     width: 270px;
     min-height: 0;
     padding: 13px 16px 17px;
-    left: 45%;
-    transform: perspective(900px) rotateY(-11deg) rotateX(4deg) rotateZ(5deg);
+    left: 49%;
+    transform: perspective(750px) rotateY(-20deg) rotateX(8deg) rotateZ(5deg);
     box-shadow: 0 24px 42px rgba(20,42,75,.27), inset 0 1px rgba(255,255,255,.16);
   }
 }
