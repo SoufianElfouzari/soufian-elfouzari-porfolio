@@ -1460,3 +1460,37 @@
   box-shadow: 0 5px 14px rgba(23,32,49,.085);
   transform: translateY(-1px);
 }
+
+/* Social label and accessible hover/focus tooltips */
+.hero__social-label { font-weight: 400; }
+.hero__social-links a { position: relative; }
+.hero__social-links a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 30;
+  bottom: calc(100% + 11px);
+  left: 50%;
+  transform: translate(-50%, 5px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #17191d;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  box-shadow: 0 5px 14px rgba(0,0,0,.14);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+.hero__social-links a:hover::after,
+.hero__social-links a:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__social-links a::after { transition: none; }
+}
