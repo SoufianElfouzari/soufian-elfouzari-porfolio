@@ -2029,3 +2029,10 @@
 .hero__photo {
   scale: 1.07;
 }
+
+/* Crop more of the lower body behind the hero wave, matching the reference */
+@media (min-width: 881px) {
+  .hero__photo-frame {
+    bottom: -115px;
+  }
+}
