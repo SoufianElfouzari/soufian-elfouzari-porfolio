@@ -468,15 +468,17 @@ function Hero() {
         <div className="hero__visual">
           <svg className="hero__light-trail hero__light-trail--behind" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
             <defs>
-              <linearGradient id="heroTrailGold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#fff7d7"/>
-                <stop offset="48%" stopColor="#ffd67b"/>
-                <stop offset="100%" stopColor="#fffaf0"/>
-              </linearGradient>
+              <filter id="heroGlow-behind" x="-150%" y="-150%" width="400%" height="400%" colorInterpolationFilters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="11" result="soft"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="wide"/>
+                <feMerge>
+                  <feMergeNode in="wide"/>
+                  <feMergeNode in="soft"/>
+                </feMerge>
+              </filter>
             </defs>
-            <path className="hero__light-trail-bloom" filter="url(#heroTrailBloom)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
-            <path className="hero__light-trail-glow" filter="url(#heroTrailHalo)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
-            <path className="hero__light-trail-stroke" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-aura" filter="url(#heroGlow-behind)" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-core" d="M 115 220 C 235 85 500 125 495 190 C 490 260 205 395 180 515"/>
           </svg>
           <div className="hero__photo-frame">
             <img
@@ -489,18 +491,17 @@ function Hero() {
           </div>
           <svg className="hero__light-trail hero__light-trail--front" viewBox="0 0 600 540" preserveAspectRatio="none" aria-hidden="true">
             <defs>
-              <filter id="heroTrailFrontBloom" x="-100%" y="-100%" width="300%" height="300%" colorInterpolationFilters="sRGB">
-                <feGaussianBlur stdDeviation="17"/>
-                <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.78 0 0 0  0 0 0.33 0 0  0 0 0 2.6 0"/>
-              </filter>
-              <filter id="heroTrailFrontHalo" x="-100%" y="-100%" width="300%" height="300%" colorInterpolationFilters="sRGB">
-                <feGaussianBlur stdDeviation="5"/>
-                <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.85 0 0 0  0 0 0.55 0 0  0 0 0 2 0"/>
+              <filter id="heroGlow-front" x="-150%" y="-150%" width="400%" height="400%" colorInterpolationFilters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="11" result="soft"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="wide"/>
+                <feMerge>
+                  <feMergeNode in="wide"/>
+                  <feMergeNode in="soft"/>
+                </feMerge>
               </filter>
             </defs>
-            <path className="hero__light-trail-bloom" filter="url(#heroTrailFrontBloom)" d="M 495 190 C 490 260 205 395 180 515"/>
-            <path className="hero__light-trail-glow" filter="url(#heroTrailFrontHalo)" d="M 495 190 C 490 260 205 395 180 515"/>
-            <path className="hero__light-trail-stroke" d="M 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-aura" filter="url(#heroGlow-front)" d="M 495 190 C 490 260 205 395 180 515"/>
+            <path className="hero__light-trail-core" d="M 495 190 C 490 260 205 395 180 515"/>
           </svg>
         </div>
       </div>
