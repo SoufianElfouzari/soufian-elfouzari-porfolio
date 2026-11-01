@@ -2062,17 +2062,17 @@
 .hero__light-trail path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .hero__light-trail-glow {
   stroke: #ffdc91;
-  stroke-width: 3;
-  opacity: .7;
-  filter: blur(4px) drop-shadow(0 0 7px #ffd477);
+  stroke-width: 3.5;
+  opacity: .92;
+  filter: blur(5px) drop-shadow(0 0 13px #ffd477) drop-shadow(0 0 22px #ffc56a);
   stroke-dasharray: 1250;
   stroke-dashoffset: 1250;
   animation: heroTrailDraw 2.8s ease-out forwards, heroTrailGlow 2.6s ease-in-out 2.8s infinite alternate;
 }
 .hero__light-trail-stroke {
-  stroke: #fffdf4;
-  stroke-width: 0.85;
-  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #ffdf8b);
+  stroke: #ffffff;
+  stroke-width: 0.95;
+  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px #fff7dd) drop-shadow(0 0 16px #ffd477);
   stroke-dasharray: 1250;
   stroke-dashoffset: 1250;
   animation: heroTrailDraw 2.8s ease-out forwards, heroTrailShimmer 2.6s ease-in-out 2.8s infinite alternate;
@@ -2080,12 +2080,12 @@
 .hero__light-trail--front path { animation-delay: .65s, 3.45s; }
 @keyframes heroTrailDraw { to { stroke-dashoffset: 0; } }
 @keyframes heroTrailGlow {
-  from { opacity: .42; filter: blur(3px) drop-shadow(0 0 4px #ffd477); }
-  to { opacity: .8; filter: blur(5px) drop-shadow(0 0 10px #ffcd63); }
+  from { opacity: .78; filter: blur(4px) drop-shadow(0 0 12px #ffd477) drop-shadow(0 0 18px #ffce73); }
+  to { opacity: 1; filter: blur(6px) drop-shadow(0 0 22px #ffd477) drop-shadow(0 0 32px #ffbd4f); }
 }
 @keyframes heroTrailShimmer {
-  from { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ffe1a0); }
-  to { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px #ffd477); }
+  from { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px #fff3cf) drop-shadow(0 0 17px #ffd477); }
+  to { filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 16px #fff3cf) drop-shadow(0 0 30px #ffc45a); }
 }
 @media (max-width: 880px) {
   .hero__light-trail { inset: 0; width: 100%; height: 100%; }
