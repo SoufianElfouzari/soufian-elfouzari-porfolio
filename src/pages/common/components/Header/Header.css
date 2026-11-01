@@ -575,3 +575,36 @@
     transition-duration: 0.01ms !important;
   }
 }
+/* Compact editorial header matching the supplied reference */
+.site-header { --header-height: 62px; --header-background: rgba(252,253,255,.94); --header-text:#111827; --header-border:#e5e8ec; --header-gold:#d4a447; --header-gold-dark:#b89048; height:var(--header-height); border-bottom:1px solid #e6ebf3; background:var(--header-background); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); }
+.site-header--scrolled {background:rgba(252,253,255,.97);box-shadow:0 5px 22px rgba(16,35,59,.045);}
+.site-header__inner {width:min(calc(100% - 48px), 1240px);display:grid;grid-template-columns:minmax(240px,1fr) auto minmax(175px,1fr);gap:20px;}
+.site-header__brand {gap:12px;justify-self:start;}
+.site-header__brand-logo {width:45px;height:45px;flex-basis:45px;background:rgba(255,255,255,.82);border:1px solid rgba(196,164,105,.43);}
+.site-header__brand-logo img {width:38px;height:38px;}
+.site-header__brand-name {font-size:.79rem;font-weight:700;letter-spacing:-.035em;}
+.site-header__brand-role {font-size:.55rem;letter-spacing:.08em;}
+.site-header__brand-content {gap:3px;}
+.site-header__desktop-navigation {margin:0;justify-self:center;}
+.site-header__navigation-list {gap:clamp(20px,2.5vw,35px);}
+.site-header__navigation-link {font-size:.75rem;color:#626985;font-weight:550;padding:10px 0;}
+.site-header__navigation-link::after {bottom:3px;height:2px;background:#d9a841;}
+.site-header__actions {justify-self:end;gap:11px;}
+.site-header__contact-link {min-height:37px;padding:0 17px;gap:14px;border-radius:5px;background:#111827;border-color:#111827;font-size:.73rem;box-shadow:0 1px 3px rgba(0,0,0,.12);}
+.site-header__contact-link svg {width:16px;height:16px;}
+.site-header__theme-button {width:35px;height:35px;display:inline-grid;place-items:center;background:rgba(255,255,255,.8);color:#74809a;border:1px solid #e4e8ee;border-radius:50%;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease;}
+.site-header__theme-button:hover {transform:rotate(20deg);color:#bd9347;background:#fff;}
+.site-header__theme-button svg {width:17px;height:17px;}
+html[data-theme="dark"] .site-header {--header-background:rgba(18,23,33,.94);--header-text:#eef2f7;--header-border:#333c4b; color:#eef2f7;border-bottom-color:#333c4b;}
+html[data-theme="dark"] .site-header--scrolled,html[data-theme="dark"] .site-header--menu-open {background:rgba(18,23,33,.97);}
+html[data-theme="dark"] .site-header__navigation-link {color:#b4c0d0;}
+html[data-theme="dark"] .site-header__navigation-link--active {color:#fff;}
+html[data-theme="dark"] .site-header__contact-link {background:#eff3f7;color:#111827;border-color:#eff3f7;}
+html[data-theme="dark"] .site-header__theme-button {background:#283141;color:#f4d28d;border-color:#455066;}
+html[data-theme="dark"] .site-header__brand-logo {background:#f8f8f6;}
+html[data-theme="dark"] .site-header__mobile-menu {background:#151b26;}
+html[data-theme="dark"] .site-header__mobile-link {color:#c2cbd7;}
+html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
+@media (max-width:1080px) { .site-header__inner {width:min(calc(100% - 36px),1240px);grid-template-columns:minmax(188px,1fr) auto minmax(155px,1fr);gap:13px;} .site-header__navigation-list{gap:18px;} .site-header__brand-logo{width:43px;height:43px;flex-basis:43px;} .site-header__brand-logo img{width:36px;height:36px;} }
+@media (max-width:900px) { .site-header{--header-height:62px;} .site-header__inner{display:flex;justify-content:space-between;} .site-header__desktop-navigation,.site-header__contact-link{display:none;} .site-header__menu-button{display:inline-flex;width:35px;height:35px;border-radius:50%;} .site-header__theme-button{width:35px;height:35px;} }
+@media (max-width:520px) { .site-header__inner{width:calc(100% - 28px);} .site-header__brand-logo{width:42px;height:42px;flex-basis:42px;} .site-header__brand-logo img{width:35px;height:35px;} .site-header__brand-name{font-size:.77rem;} .site-header__brand-role{font-size:.52rem;} .site-header__actions{gap:7px;} }
