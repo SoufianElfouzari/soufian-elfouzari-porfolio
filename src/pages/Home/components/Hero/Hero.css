@@ -2341,3 +2341,32 @@
     top: 35%;
   }
 }
+
+/* Clean Code reference: small readable lettering and short natural arrow */
+.hero__floating-ui > .hero__clean-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  transform: none;
+  font-family: "Bradley Hand", "Segoe Print", cursive;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.15;
+  text-shadow: none;
+}
+.hero__floating-ui > .hero__clean-note > .hero__clean-note-text {
+  display: block;
+  font: inherit;
+  color: #c79a57;
+  margin: 0;
+}
+.hero__floating-ui > .hero__clean-note > .hero__clean-arrow {
+  width: 45px;
+  height: 42px;
+  margin: 14px 0 0 0;
+  transform: none;
+}
+.hero__floating-ui > .hero__clean-note .hero__clean-arrow path {
+  stroke-width: 1.35;
+}
