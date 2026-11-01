@@ -2212,3 +2212,37 @@
   margin: -5px 0 0 12px;
   transform: rotate(192deg);
 }
+
+/* Small, elegant curved hand-drawn arrow for the Clean Code annotation */
+.hero__clean-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+}
+.hero__clean-note > .hero__clean-note-text {
+  display: block;
+  margin: 0;
+  color: #bd9650;
+  font: inherit;
+}
+.hero__clean-arrow {
+  width: 55px;
+  height: 65px;
+  margin: 7px 0 0 -2px;
+  overflow: visible;
+  transform: rotate(9deg);
+}
+.hero__clean-arrow path {
+  stroke: #c99649;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: heroCleanArrowDraw 1.35s ease-out forwards;
+}
+.hero__clean-arrow-tip { animation-delay: 1.15s !important; animation-duration: .35s !important; }
+@keyframes heroCleanArrowDraw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__clean-arrow path { animation: none; stroke-dashoffset: 0; }
+}
