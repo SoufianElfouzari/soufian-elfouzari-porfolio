@@ -2385,9 +2385,9 @@
   .hero__floating-ui > .hero__code-widget {
     top: 11%;
     left: 43%;
-    width: 305px;
-    min-height: 255px;
-    padding: 20px 20px 26px;
+    width: 310px;
+    min-height: 0;
+    padding: 13px 17px 17px;
     transform: perspective(900px) rotateY(-13deg) rotateX(5deg) rotateZ(5deg);
     transform-origin: 50% 50%;
     border-radius: 13px;
@@ -2395,15 +2395,15 @@
   }
   .hero__floating-ui > .hero__code-widget .hero__code-body {
     font-size: 11px;
-    line-height: 1.8;
-    row-gap: 9px;
+    line-height: 1.45;
+    row-gap: 5px;
   }
 }
 @media (min-width: 1001px) and (max-width: 1250px) {
   .hero__floating-ui > .hero__code-widget {
     width: 270px;
-    min-height: 230px;
-    padding: 17px 17px 22px;
+    min-height: 0;
+    padding: 13px 16px 17px;
     left: 45%;
     transform: perspective(900px) rotateY(-11deg) rotateX(4deg) rotateZ(5deg);
     box-shadow: 0 24px 42px rgba(20,42,75,.27), inset 0 1px rgba(255,255,255,.16);
