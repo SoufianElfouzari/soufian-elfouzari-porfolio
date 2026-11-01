@@ -2379,3 +2379,29 @@
   width: 53px;
   height: 50px;
 }
+
+/* Larger perspective code panel like the reference, with a subtle 3D tilt */
+@media (min-width: 1251px) {
+  .hero__floating-ui > .hero__code-widget {
+    top: 11%;
+    left: 43%;
+    width: 355px;
+    padding: 17px 19px 22px;
+    transform: perspective(900px) rotateY(-13deg) rotateX(5deg) rotateZ(5deg);
+    transform-origin: 50% 50%;
+    border-radius: 13px;
+    box-shadow: 0 28px 48px rgba(20,42,75,.30), 0 8px 20px rgba(20,42,75,.13), inset 0 1px rgba(255,255,255,.16);
+  }
+  .hero__floating-ui > .hero__code-widget .hero__code-body {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1250px) {
+  .hero__floating-ui > .hero__code-widget {
+    width: 290px;
+    left: 45%;
+    transform: perspective(900px) rotateY(-11deg) rotateX(4deg) rotateZ(5deg);
+    box-shadow: 0 24px 42px rgba(20,42,75,.27), inset 0 1px rgba(255,255,255,.16);
+  }
+}
