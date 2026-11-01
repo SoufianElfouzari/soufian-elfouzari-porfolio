@@ -2024,3 +2024,8 @@
   transform: rotate(5deg);
   transform-origin: center center;
 }
+
+/* Slightly enlarge portrait without changing its rotation or placement */
+.hero__photo {
+  scale: 1.07;
+}
