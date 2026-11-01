@@ -66,70 +66,6 @@ function EmailIcon() {
   );
 }
 
-function AnimatedBook() {
-  return (
-    <span className="hero__book" aria-hidden="true">
-      <span className="hero__book-shadow" />
-
-      <span className="hero__book-side hero__book-side--left">
-        <span className="hero__book-page-line hero__book-page-line--one" />
-        <span className="hero__book-page-line hero__book-page-line--two" />
-        <span className="hero__book-page-line hero__book-page-line--three" />
-      </span>
-
-      <span className="hero__book-side hero__book-side--right">
-        <span className="hero__book-page-line hero__book-page-line--one" />
-        <span className="hero__book-page-line hero__book-page-line--two" />
-        <span className="hero__book-page-line hero__book-page-line--three" />
-      </span>
-
-      <span className="hero__book-turning-page hero__book-turning-page--one" />
-      <span className="hero__book-turning-page hero__book-turning-page--two" />
-      <span className="hero__book-spine" />
-    </span>
-  );
-}
-
-function ProjectCircle() {
-  return (
-    <a
-      className="hero__project-circle"
-      href="#projekte"
-      aria-label="Projekte ansehen"
-    >
-      <span className="hero__project-pulse" aria-hidden="true" />
-
-      <svg
-        className="hero__project-circle-text"
-        viewBox="0 0 140 140"
-        aria-hidden="true"
-      >
-        <defs>
-          <path
-            id="hero-project-circle-path"
-            d="M70,70 m-51,0 a51,51 0 1,1 102,0 a51,51 0 1,1 -102,0"
-          />
-        </defs>
-
-        <text>
-          <textPath
-            href="#hero-project-circle-path"
-            startOffset="0%"
-            textLength="320"
-            lengthAdjust="spacing"
-          >
-            PROJEKTE ANSEHEN • PROJEKTE ANSEHEN •
-          </textPath>
-        </text>
-      </svg>
-
-      <span className="hero__project-circle-center">
-        <AnimatedBook />
-      </span>
-    </a>
-  );
-}
-
 function DraggableIntro({ heroRef }) {
   const introRef = useRef(null);
   const interactionRef = useRef(null);
@@ -522,18 +458,24 @@ function Hero() {
         </div>
 
         <div className="hero__visual">
+          <div className="hero__city-scene" aria-hidden="true">
+            <img
+              src="/images/city-hero.png"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+          </div>
 
           <div className="hero__photo-frame">
-            <div className="hero__photo-line" aria-hidden="true" />
-
             <img
               className="hero__photo"
               src="/images/person.png"
               alt="Soufian El-Fouzari"
+              loading="eager"
+              decoding="async"
             />
           </div>
-
-          <ProjectCircle />
         </div>
       </div>
       <div className="hero__service-grid" aria-label="Meine Leistungen">

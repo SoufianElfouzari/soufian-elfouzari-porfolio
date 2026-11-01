@@ -1376,3 +1376,161 @@
 
 /* Minimal clean hero surface, without decorative paths or ribbons */
 .hero { background: linear-gradient(115deg, #ffffff 0%, #ffffff 62%, #faf9f6 100%); }
+
+
+/* Hero city scene and foreground portrait */
+.hero__visual {
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+  max-width: 640px;
+  min-height: 610px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero__city-scene {
+  position: absolute;
+  z-index: 0;
+  right: -72px;
+  bottom: 10px;
+  width: calc(100% + 90px);
+  height: 330px;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 19%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 19%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.hero__city-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, .86) 0%,
+    rgba(255, 255, 255, .25) 25%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.hero__city-scene img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 57%;
+  opacity: .92;
+}
+
+.hero__photo-frame {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 490px);
+  height: 590px;
+  aspect-ratio: auto;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  animation: none;
+}
+
+.hero__photo-frame::after,
+.hero__photo-line {
+  display: none;
+  content: none;
+}
+
+.hero__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 83% at 50% 51%,
+    #000 66%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 83% at 50% 51%,
+    #000 66%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 9px 16px rgba(24, 34, 45, .10));
+}
+
+@media (max-width: 1100px) {
+  .hero__visual {
+    max-width: 560px;
+    min-height: 545px;
+  }
+
+  .hero__city-scene {
+    right: -35px;
+    width: calc(100% + 35px);
+    height: 290px;
+  }
+
+  .hero__photo-frame {
+    width: min(91%, 425px);
+    height: 530px;
+  }
+}
+
+@media (max-width: 880px) {
+  .hero__visual {
+    max-width: 600px;
+    min-height: 510px;
+  }
+
+  .hero__city-scene {
+    right: -10px;
+    bottom: 0;
+    width: 100%;
+    height: 280px;
+  }
+
+  .hero__photo-frame {
+    width: min(86%, 430px);
+    height: 500px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__visual {
+    max-width: 100%;
+    min-height: 390px;
+  }
+
+  .hero__city-scene {
+    right: -10px;
+    height: 220px;
+  }
+
+  .hero__photo-frame {
+    width: min(88%, 340px);
+    height: 390px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo-frame {
+    animation: none;
+  }
+}
