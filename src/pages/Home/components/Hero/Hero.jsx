@@ -533,7 +533,7 @@ function Hero() {
         <div className="hero__idea-note">
           <svg className="hero__idea-arrow" viewBox="0 0 115 145" fill="none" aria-hidden="true">
             <path className="hero__idea-arrow-line" d="M 48 3 C 35 30 28 51 31 68 C 34 83 13 91 12 76 C 11 60 31 61 47 65 C 66 70 88 57 97 72 C 108 91 86 111 72 124"/>
-            <path className="hero__idea-arrow-head" d="M 60 119 Q 66 123 72 124 Q 75 118 76 112"/>
+            <path className="hero__idea-arrow-head" d="M 74 112 Q 73 118 72 124 M 72 124 Q 79 122 85 122"/>
           </svg>
           <span className="hero__idea-note-text">Ideen<br/>in Lösungen<br/>verwandeln.</span>
         </div>
