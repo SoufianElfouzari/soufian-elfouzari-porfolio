@@ -1382,3 +1382,23 @@
     9px 12px 21px rgba(190,151,65,.43),
     inset 0 1px 0 rgba(255,255,255,.20);
 }
+
+/* Keep the button face solid black; cast the gold glow OUTSIDE it */
+.hero__button--primary {
+  isolation: auto;
+  background: #151619;
+  border-color: #343331;
+  box-shadow:
+    4px 6px 12px rgba(15, 15, 16, .25),
+    8px 10px 16px rgba(190, 151, 65, .38),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+.hero__button--primary::before { content: none; }
+.hero__button--primary:hover {
+  color: #fff;
+  background: #1b1c20;
+  box-shadow:
+    5px 8px 15px rgba(15,15,16,.28),
+    10px 13px 20px rgba(190,151,65,.44),
+    inset 0 1px 0 rgba(255,255,255,.14);
+}
