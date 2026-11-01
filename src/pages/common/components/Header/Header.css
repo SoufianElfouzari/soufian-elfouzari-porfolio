@@ -681,3 +681,10 @@ html[data-theme="dark"] .site-header__mobile-link--active {color:white;}
 }
 .site-header__navigation-link:hover::after,
 .site-header__navigation-link--active::after { transform: scaleX(1); }
+
+/* Refined shine: keep the white highlight, soften the glow */
+.site-header__navigation-link::after {
+  height: 2.5px;
+  background: linear-gradient(90deg, #c69439 0%, #e7bc69 32%, #fff3d0 51%, #e8bb61 70%, #c69439 100%);
+  box-shadow: 0 0 3px rgba(236,185,83,.32), 0 0 6px rgba(236,185,83,.13);
+}
